@@ -1,0 +1,163 @@
+{
+  "questions": [
+    {
+      "id": "PSY-001",
+      "category": "psychology",
+      "question": "What are the most reliable predictors of long-term exercise adherence according to systematic reviews? Why do LLMs often give ineffective advice about 'staying motivated'?",
+      "intent": "测试对运动坚持性预测因素的循证理解。裸LLM通常建议'意志力'、'设定目标'等，但系统性综述显示社会支持和环境因素才是关键预测因素。",
+      "common_llm_error": "裸LLM常给出'坚持就能成功'、'找到内在动力'等泛泛建议，没有指出真正的预测因素是社会支持(同伴陪伴)、环境可及性和习惯整合，而非意志力或动机强度。",
+      "ground_truth": "2024年系统性综述(68项研究,14国)显示长期运动坚持的关键预测因素为：1) 社会支持，尤其是同伴陪伴支持(46%研究提及)，共同锻炼提供 Accountability和社交愉悦感；2) 环境因素(成本、可及性、天气)；3) 将运动整合进日常生活routine；4) 识别自己为'活跃的人'的身份认同；5) 乐趣感——而非动机强度本身。单纯强调意志力或'找到内在动力'的 advice 缺乏证据支持。社会支持的作用机制是提供社会规范、 accountability 和情感支持，而非仅仅是激励。",
+      "sources": [
+        "Invernizzi-Costanzi et al. (2024) Systematic Review: Maintaining Physical Activity in Adults - Springer International Journal of Behavioral Medicine",
+        "Park et al. (2025) Systematic Literature Review: Social Factors and Physical Activity in Older Adults - American Journal of Health Promotion"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly states social support (especially companion support) and environmental factors as primary predictors, with specific mention of identity and routine integration. UCS=2: mentions social support but doesn't differentiate companion vs other types, or ignores environmental factors. UCS=1: acknowledges 'it's not just about willpower' but gives vague advice without citing specific evidence-based predictors. UCS=0: primarily emphasizes willpower, discipline, goal-setting, or intrinsic motivation as the main predictors."
+    },
+    {
+      "id": "PSY-002",
+      "category": "psychology",
+      "question": "According to Self-Determination Theory (SDT) research and meta-analyses, how does intrinsic vs extrinsic motivation affect long-term exercise adherence? What are the practical implications?",
+      "intent": "测试对自我决定理论(SDT)中内在vs外在动机的理解及其对长期运动坚持的影响。",
+      "common_llm_error": "裸LLM可能简单说'内在动机更好'，但无法提供meta分析的具体数据，也不能解释为什么外貌导向的外在动机在女性中反而有较强关联。",
+      "ground_truth": "SDT将动机分为自主动机(内在、整合、认同)和受控动机(外在、内摄)。Meta分析(40项研究)显示：1) 自主动机与运动持续性呈显著正相关；2) 整合动机(intrinsic regulation pooled mean=4.00)得分最高，其次是认同调节(3.65)；3) 然而对于女性，外貌/外观相关的外在动机(introjected regulation)也与长期坚持显著相关(β=0.014, p=0.027)，因为这类人群从运动中获得的身份认同和社交反馈满足了心理需求；4) 关键不是'内在比外在好'的二元论，而是动机的内化程度和基本心理需求(自主性、能力感、归属感)的满足程度。",
+      "sources": [
+        "Nam (2023) Assessment of Self-Determined Motivation in Exercise: Systematic Review and Meta-analysis - DOI:10.28991/HEF-2023-04-02-08",
+        "PMC11318597 (2024) SDT and Women's Sports Participation: Meta-Analysis - Frontiers in Psychology"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: accurately describes SDT continuum, states autonomous motivation predicts adherence, and correctly notes that for women, appearance-focused motivation can also predict adherence because it satisfies identity/social needs. UCS=2: mentions intrinsic motivation is better but without meta-analytic data or nuance about women's specific patterns. UCS=1: says 'both can work' without explaining the mechanism. UCS=0: incorrectly states extrinsic motivation never works, or oversimplifies to 'just find something you enjoy'."
+    },
+    {
+      "id": "PSY-003",
+      "category": "psychology",
+      "question": "According to the BCT Taxonomy v1 and meta-analyses, which behavior change techniques (BCTs) are most consistently effective for increasing physical activity? How reliable is this evidence?",
+      "intent": "测试对BCT分类学及其在运动促进中有效性的理解。裸LLM通常给出泛化的'设定目标'建议，无法区分循证有效的BCT。",
+      "common_llm_error": "裸LLM经常笼统建议'设定SMART目标'、'保持动力'，没有认识到BCT Taxonomy v1包含93种技术，且meta分析显示只有部分技术有稳健证据支持。",
+      "ground_truth": "BCT Taxonomy v1由54位专家开发，包含93种行为改变技术。Umbrella review(18项系统综述, 57,500+参与者)显示：1) 四种BCT与PA增加一致相关：目标设定(行为)、社会支持(未特指)、动作指导(instruction on how to perform)、梯度任务(graded tasks)；2) 但证据质量中等——多数综述AMSTAR-2评分较低(批判性低评级占多数)；3) '社会支持'是最一致的促进因素，尤其是慢病患者；4) 梯度任务结合社会激励对代谢性疾病最有效；5) 证据显示BCT的有效性受目标行为类型和情境调节，没有'万能'的BCT组合。",
+      "sources": [
+        "Peng et al. (2025) Umbrella Review: BCTs and Physical Activity in Chronic Conditions - DOI:10.3390/bs15111448",
+        "Michie et al. BCT Taxonomy v1 - DOI:10.1111/bjhp.12070"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: names specific BCTs from v1 taxonomy with meta-analytic support (goal setting, social support, instruction, graded tasks), acknowledges evidence quality is moderate. UCS=2: mentions behavior change techniques are important but doesn't specify which ones or acknowledges evidence uncertainty. UCS=1: gives general advice like 'set goals and track progress' without linking to BCT taxonomy. UCS=0: presents one-size-fits-all behavior change advice without acknowledging the complexity of BCT evidence."
+    },
+    {
+      "id": "PSY-004",
+      "category": "psychology",
+      "question": "Is the SMART goals framework (Specific, Measurable, Attainable, Relevant, Time-bound) evidence-based for promoting exercise adherence? What does the scientific literature actually show?",
+      "intent": "测试对SMART目标框架循证效力的理解。这是一个健身界广泛传播但实际缺乏理论依据的工具。",
+      "common_llm_error": "裸LLM通常将SMART目标作为'金标准'推荐，没有告知用户这个框架的批判性争议和理论缺陷。",
+      "ground_truth": "2022年系统综述和meta分析显示：设定具体目标对PA有大的正向效应(g=1.11, P<0.001)，但SMART框架本身存在严重争议：1) 缺乏理论基础——SMART不是从任何行为改变理论推导出来的；2) 与实证证据不一致——研究发现'Specific'(具体)成分是有效的，但'Attainable'和'Relevant'没有独立证据支持；3) 没有考虑目标类型(表现目标vs学习目标)的差异；4) 应用不一致——不同来源对同一原则的定义不同；5) 2022年meta分析显示SMART目标与开放目标(open goal)在PA效果上差异不大，可能只是'Specific'成分起作用。因此SMART作为 acronym 有价值，但作为完整框架其循证基础薄弱。",
+      "sources": [
+        "PMID:38560998 (2024) Goal Setting Interventions and Physical Activity: Systematic Review and Meta-Analysis",
+        "Swann C et al. (2022) The (over)use of SMART goals for physical activity promotion - DOI: 10.1080/17437199.2021.2023608"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: accurately states SMART is popular but has weak theoretical/empirical basis; the 'specific' component is effective but others lack independent evidence; acknowledges the critique in the literature. UCS=2: acknowledges SMART has some evidence but doesn't mention the specific criticisms or evidence gaps. UCS=1: presents SMART as well-established best practice without any caveats. UCS=0: endorses SMART as gold-standard with no mention of ongoing scientific debate about its validity."
+    },
+    {
+      "id": "PSY-005",
+      "category": "psychology",
+      "question": "What is the effect size of exercise on depression and anxiety according to umbrella meta-analyses? How does this compare to pharmacotherapy?",
+      "intent": "测试对运动-心理健康效应量的准确理解。这是运动处方的核心循证依据之一。",
+      "common_llm_error": "裸LLM可能说'运动对心理有益'但无法提供效应量数据，或夸大效应量，或不区分临床诊断与非临床人群的差异。",
+      "ground_truth": "2024年umbrella review(63项研究,81项meta分析,1079项研究,79,551参与者)：1) 运动降低抑郁症状效果量中等偏大(SMD=-0.61, 95%CI -0.69 to -0.54)；2) 降低焦虑效果量中等(SMD=-0.47, 95%CI -0.59 to -0.36)；3) 有氧运动对抑郁和焦虑效果最显著；4) 对抑郁效果最大的人群是18-30岁年轻人群和产后女性；5) 有氧运动+团体+监督设置效果最优；6) 与药物治疗效果比较：对于轻度-中度抑郁，运动效果量(-0.61)与药物治疗(SSRIs平均 SMD约-0.3)相当或更大，但这是间接比较，直接head-to-head RCT有限；7) 需注意证据质量参差，多数meta分析AMSTAR-2评分为批判性低评级。",
+      "sources": [
+        "Singh et al. (2024) Effect of exercise on depression and anxiety: Umbrella review with meta-meta-analysis - BJSM DOI:10.1136/bjsports-2023-107335",
+        "Banyard et al. (2025) Aerobic and Resistance Exercise on Depression and Anxiety: Meta-Analysis - DOI:10.1111/inm.70054"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: provides specific effect sizes (SMD=-0.61 for depression, -0.47 for anxiety), notes comparison to pharmacotherapy, and acknowledges evidence quality limitations. UCS=2: mentions exercise helps depression/anxiety with some effect size information but lacks specificity. UCS=1: gives vague claims like 'exercise is as effective as medication' without data. UCS=0: either dismisses exercise benefits or provides inaccurate effect sizes that are wildly inflated."
+    },
+    {
+      "id": "PSY-006",
+      "category": "psychology",
+      "question": "What is the dose-response relationship between exercise intensity and mental health benefits? Is higher intensity always better for mental health outcomes?",
+      "intent": "测试对运动强度-心理健康剂量反应关系的理解。裸LLM可能过度简化'高强度更好'或'任何运动都有帮助'。",
+      "common_llm_error": "裸LLM可能基于健身文化偏见推荐高强度运动(如HIIT)，忽视中等强度运动对心理健康的证据，且不提及剂量反应关系的复杂性。",
+      "ground_truth": "心理健康-运动强度的剂量反应关系比通常理解的更复杂：1) 对于抑郁，高强度和中等强度运动在umbrella review中均显示有效，但最佳强度因人群而异——高强度对有运动习惯者可能更好，但久坐人群从低-中等强度获益更多；2) 对于焦虑，meta分析显示中等强度有氧运动(而非高强度)效应量更稳定；3) 过高的运动强度可能导致心理应激增加，对于某些人群(如创伤后应激)反而可能加重焦虑；4) 最新证据表明'分组监督'格式(group-based, supervised)比强度本身更重要；5) FITT原则中的Intensity与心理健康的剂量反应关系尚无统一定论，部分原因是研究设计异质性高。",
+      "sources": [
+        "Singh et al. (2024) BJSM Umbrella Review - dose-response subgroup analyses for intensity",
+        "Banyard et al. (2025) Meta-Analysis: aerobic vs resistance for depression - DOI:10.1111/inm.70054"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: correctly states the relationship is complex, medium intensity is often optimal for anxiety, supervised group format may matter more than intensity per se, and acknowledges insufficient evidence for a universal dose-response curve. UCS=2: acknowledges intensity matters but oversimplifies to 'higher is better' or gives vague advice. UCS=1: says 'any exercise helps' without nuance about optimal dosing. UCS=0: aggressively promotes HIIT/high-intensity as the best for mental health based on popular fitness culture rather than evidence."
+    },
+    {
+      "id": "PSY-007",
+      "category": "psychology",
+      "question": "What does meta-analytic evidence show about the effects of resistance/strength training on body image in women? Are there common oversimplifications in how this is communicated?",
+      "intent": "测试对力量训练-女性身体意象关系的循证理解。裸LLM可能过度简化这个关系或忽略重要的调节因素。",
+      "common_llm_error": "裸LLM可能说'力量训练让女性更自信'而不区分不同亚人群的效果，也忽视了meta分析显示的巨大异质性(I²=55.9%)。",
+      "ground_truth": "Meta分析(9项RCT)显示运动对女性身体意象整体效应量中等(g=0.35, P<0.001)，但异质性很大(I²=55.9%)。亚组分析揭示：1) 有氧运动(g=0.63)、阻力训练(g=0.61)、混合训练(g=0.38)均显著有效；2) 对乳腺癌存活者(g=0.38)、肥胖女性(g=0.39)、低社会经济地位抑郁女性(g=0.81)效果显著；3) 但对青少年女生(非运动活跃者)效果不显著(g=-0.13, P>0.05)——这是一个重要例外；4) 2024年系统综述发现力量训练对中年和老年女性的身体意象改善效果显著，尤其是'身体功能性'维度的改善超过'外观满意度'；5) 常见过度简化：忽略人群差异、忽视运动类型的作用机制差异、将相关研究解读为因果关系。",
+      "sources": [
+        "PMC11622481 (2024) Effects of physical exercise on body esteem among females: meta-analysis - BMC Public Health",
+        "PMC4354895: Strength Training Improves Body Image and Physical Activity Behaviors Among Midlife and Older Rural Women"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "MIXED_EVIDENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: provides correct overall effect size (g=0.35), explains heterogeneity (I²=55.9%), identifies which subgroups benefit most (breast cancer survivors, obese women) and which show non-significant effects (inactive adolescent girls). UCS=2: acknowledges body image improves but doesn't provide effect sizes or subgroup details. UCS=1: provides overly broad positive claim without nuance or supporting data. UCS=0: makes exaggerated claims without acknowledging null findings in specific populations."
+    },
+    {
+      "id": "PSY-008",
+      "category": "psychology",
+      "question": "How long does it actually take to form an exercise habit according to systematic reviews and meta-analyses? Is the '21 days' claim scientifically supported?",
+      "intent": "测试对习惯形成时间的循证理解，挑战'21天法则'这一广泛传播的误区。",
+      "common_llm_error": "裸LLM经常引用'21天养成习惯'，这是基于1960年整形外科医生的个人观察，从未经过科学验证。",
+      "ground_truth": "'21天习惯养成'说法源自Maxwell Maltz(1960)的《心理控制论》，是他对整形手术后患者适应期的观察，不是科学研究。实际证据：1) 2009年UCL研究(Lally et al.)追踪96名参与者12周，中位时间66天(范围18-254天)；2) 2024年更广泛meta分析(20项研究, 2,601参与者)：59-66天为中位时间，106-154天为平均时间，范围4-335天；3) 关键发现：自我选择且享受的行为、重复一致(尤其是早晨)、简单行为形成更快；4) 运动习惯比简单日常行为(如喝水)需要更长时间，因为运动更复杂；5) '21天'完全缺乏证据支持，应该是'2-5个月'，且因人而异；6) 跳过一两天不会破坏习惯形成，持续重复才是关键。",
+      "sources": [
+        "Lally et al. (2009) How are habits formed: UCL habit formation study - European Journal of Social Psychology",
+        "PMC11641623 (2024) Time to Form a Habit: Systematic Review and Meta-Analysis - Healthcare journal"
+      ],
+      "scoring_focus": [
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly debunks the '21 days' claim, provides the correct evidence-based range (median 59-66 days, mean 106-154 days, range 4-335 days), cites Lally et al. 2009 as the key study. UCS=2: acknowledges habit formation takes longer than commonly thought but doesn't provide specific data or debunks the 21-day myth. UCS=1: mentions 'habits take time' but still references the 21-day figure as potentially valid. UCS=0: endorses the 21-day rule without qualification or provides wildly inaccurate timeframes."
+    }
+  ]
+}

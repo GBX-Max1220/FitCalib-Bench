@@ -1,0 +1,742 @@
+{
+  "questions": [
+    {
+      "id": "FAC-001",
+      "category": "factual",
+      "question": "What is the safety recommendation regarding the Valsalva maneuver during heavy resistance training?",
+      "intent": "测试对Valsalva动作安全性的理解。裸LLM通常建议'不要憋气'，但权威机构认为大负重时Valsalva是标准保护技术。",
+      "common_llm_error": "裸LLM通常会说'训练时不要憋气，要保持呼吸'，这对于轻中重量是对的，但对于大重量举重，Valsalva是稳定脊柱的标准保护技术。",
+      "ground_truth": "大重量举重时，Valsalva动作是稳定脊柱、保护腰椎的标准技术。当负荷超过约80% 1RM或进行复合大动作时，屏气可以：1) 增加胸腔和腹腔压力，稳定脊柱；2) 减少举重时的心血管压力波动；3) 提供更好的发力基础。正确的Valsalva技术是在发力前深吸气并在动作全程屏气，而非随意憋气。",
+      "sources": [
+        "ACSM Resistance Training Position Stand (2026): Valsalva is a standard protective technique during heavy lifting",
+        "NSCA Basics of Strength and Conditioning Manual"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "安全性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly states Valsalva is a standard/protective technique for heavy lifting (per ACSM 2026). UCS=2: says 'breathe steadily' or 'don't hold breath' as general advice without context. UCS=1: acknowledges Valsalva for heavy lifts but adds vague 'but consult a doctor' warning. UCS=0: states 'never hold your breath during training' or 'Valsalva is dangerous and should be avoided' without qualification."
+    },
+    {
+      "id": "FAC-002",
+      "category": "factual",
+      "question": "What is the recommended repetition range for muscle hypertrophy according to the latest ACSM position stand? How has this changed from traditional recommendations?",
+      "intent": "测试对增肌次数区间最新证据的理解。传统观点是8-12RM，但2026版ACSM支持更宽范围，强调周训练量和接近力竭程度更重要。",
+      "common_llm_error": "裸LLM通常固守'增肌要做8-12RM'的死板规则，没有反映2026版的最新证据更新。",
+      "ground_truth": "2026版ACSM立场声明不再将8-12RM视为增肌的唯一有效区间。关键发现：1) 增肌效果主要与周训练量(dose-response)相关，而非固定次数区间；2) 每周每肌群≥10组是重要指标；3) 较低负荷(15-30RM)在达到力竭时同样可以有效增肌；4) 关键变量是总训练量和接近力竭程度，而非机械张力本身；5) 个体化比死板规则更重要。",
+      "sources": [
+        "ACSM Position Stand on Resistance Training (2026): 'Volume: ≥10 sets/week (dose-response)' for hypertrophy",
+        "ACSM Position Stand (2026): 'Individualization is More Important Than Rigid Rules'"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "时效性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly states the 2026 update — 8-12RM is no longer the only valid range; weekly volume (≥10 sets/week) and proximity to failure are more important than specific rep ranges. UCS=2: acknowledges 'the evidence is evolving' but doesn't state the new guidance. UCS=1: says '8-12RM is still a good target, though flexibility is important' preserving the old rule as primary. UCS=0: rigidly states '8-12RM is the best/hypertrophy range' without acknowledging the 2026 update."
+    },
+    {
+      "id": "FAC-003",
+      "category": "factual",
+      "question": "What is the recommended frequency for resistance training to improve strength in healthy adults?",
+      "intent": "测试对力量训练频率的理解，包括新手vs进阶人群的区别。",
+      "common_llm_error": "裸LLM可能给出一刀切的频率建议，没有区分不同训练目标和人群。",
+      "ground_truth": "ACSM 2026版立场声明：1) 一般建议每周至少2次针对所有主要肌群的训练；2) 力量目标：频率≥2次/周；3) 增肌目标：周训练量是关键变量，频率安排应确保每肌群每周≥10组；4) 新手可从每周2-3次全身训练开始；5) 进阶训练者可采用分肌群训练(如每周3-4次，每次专注不同肌群)；6) 关键是确保足够的恢复和总训练量。",
+      "sources": [
+        "ACSM Position Stand on Resistance Training (2026): 'Frequency: ≥2 sessions/week' for strength",
+        "ACSM Position Stand (2026): 'General Health/Wellness Guidelines: At least two days per week at moderate to heavy loads for all major muscle groups'"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states ≥2 sessions/week with appropriate qualifiers for novice vs. advanced. UCS=2: says 'it depends on goals' without specific frequency guidance. UCS=1: gives a frequency with a caveat 'generally 2-3x/week, but it depends'. UCS=0: gives extreme recommendations (e.g., 'train 6x/week for everyone') or 'once a week is sufficient' without context."
+    },
+    {
+      "id": "FAC-004",
+      "category": "factual",
+      "question": "What intensity range is recommended for resistance training aimed at muscular strength development in healthy adults?",
+      "intent": "测试对力量训练强度选择的理解。",
+      "common_llm_error": "裸LLM可能混淆力量vs增肌的强度推荐，或给出不精确的范围。",
+      "ground_truth": "ACSM 2026版立场声明明确指出：力量训练强度应为≥80% 1RM(剂量反应关系)。具体：1) 力量目标：≥80% 1RM；2) 功率目标：30-70% 1RM；3) 增肌目标：范围更宽，可从中等负荷到高负荷，关键看总训练量；4) FITT推荐表(2019)对于高血压人群建议：60-70% 1RM，渐进至80% 1RM，老年人和初学者从40-50% 1RM开始。",
+      "sources": [
+        "ACSM Position Stand on Resistance Training (2026): 'Intensity: ≥80% 1RM (dose-response)' for strength",
+        "ACSM FITT Recommendations for Hypertension (2019 update)"
+      ],
+      "scoring_focus": [
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states ≥80% 1RM for strength development with appropriate context for different goals. UCS=2: says 'intensity depends on goals' without specifying ranges. UCS=1: gives the correct range but adds vague caveats. UCS=0: claims 'light weights (e.g., 50% 1RM) are just as good for strength' or gives wildly inaccurate intensity ranges."
+    },
+    {
+      "id": "FAC-005",
+      "category": "factual",
+      "question": "According to the 2026 ACSM Position Stand, what is the recommended minimum weekly volume for muscle hypertrophy per muscle group?",
+      "intent": "测试对2026版ACSM新增的周训练量推荐的理解，这是与传统8-12RM建议的重要区别。",
+      "common_llm_error": "裸LLM可能不知道2026版的具体数字，或仍然只关注单次训练的组数而非周总组数。",
+      "ground_truth": "2026版ACSM立场声明明确推荐：增肌目标每周每肌群≥10组(dose-response)。这反映了：1) 增肌效果与周训练量呈剂量反应关系；2) 相比单次训练的组数，累计周总量更重要；3) 这意味着如果每次训练每个肌群做3-4组，一周需要训练3次才能达到10组；4) 高训练量是增肌的关键驱动因素之一。",
+      "sources": [
+        "ACSM Position Stand on Resistance Training (2026): Table 6 'Hypertrophy: Volume: ≥10 sets/week (dose-response)'"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "时效性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states the ≥10 sets/week per muscle group recommendation accurately. UCS=2: acknowledges volume matters but doesn't state the specific ≥10 sets threshold. UCS=1: says 'volume is important, around 10-20 sets per week' creating false precision. UCS=0: ignores the weekly volume concept, or claims 'any volume works equally well'."
+    },
+    {
+      "id": "FAC-006",
+      "category": "factual",
+      "question": "What is the effect of resistance training on blood pressure in individuals with hypertension according to the updated ACSM scientific statement?",
+      "intent": "测试对阻力训练降压效果的更新理解。2004版和2019更新版有明显变化。",
+      "common_llm_error": "裸LLM可能仍停留在'阻力训练会升高血压'的旧观念，或不知道2019年的重要更新。",
+      "ground_truth": "2019年ACSM科学声明更新：1) 阻力训练具有与有氧运动相当的降压效果(这是2004版没有写的重要更新)；2) 收缩压和舒张压均可通过阻力训练降低；3) FITT建议每周>2-3次训练，利用运动后低血压效应(Postexercise Hypotension)；4) 强度建议60-70% 1RM，渐进至80% 1RM；5) 对于初学者和老年人从40-50% 1RM开始；6) 应在大多数日子训练以最大化降压效果。",
+      "sources": [
+        "ACSM Exercise and Hypertension (2019 update): 'Resistance training has comparable BP-lowering effects to aerobic exercise'",
+        "ACSM FITT Recommendations for Hypertension (2019 update)"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "时效性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly acknowledges the 2019 update and states that RT has 'comparable BP-lowering effects to aerobic exercise.' UCS=2: mentions 'some BP benefits' without citing the 2019 update. UCS=1: says 'RT can help lower BP, though aerobic exercise is generally more effective' preserving the old hierarchy. UCS=0: presents the 2004 conservative stance ('RT may increase BP') as current guidance."
+    },
+    {
+      "id": "FAC-007",
+      "category": "factual",
+      "question": "According to the NSCA position statement, is resistance training safe for children and adolescents? Does it negatively affect growth and development?",
+      "intent": "测试对青少年力量训练安全性的循证理解。NSCA立场声明有明确结论。",
+      "common_llm_error": "裸LLM可能基于常识而非循证证据，对青少年力量训练持过度保守态度，或给出模糊不清的警告。",
+      "ground_truth": "NSCA 2009年立场声明明确指出：1) 正确设计和监督的力量训练对儿童和青少年是安全的；2) 力量训练不会负面影响生长和发育；3) 医疗、健身和体育组织对青少年力量训练的 Qualified acceptance 已成为普遍共识；4) 适当的力量训练可以：增强肌肉力量和爆发力、改善运动表现、预防运动损伤、促进骨骼健康、改善身体成分、提升自尊心；5) 关键是在合格监督下进行，使用适合的负荷和技术。",
+      "sources": [
+        "NSCA Youth Resistance Training Position Statement (2009): 'Resistance training can offer unique benefits for children and adolescents when appropriately prescribed and supervised'",
+        "NSCA Youth Position Statement (2009): 'The qualified acceptance of youth resistance training by medical, fitness, and sport organizations is becoming universal'"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "安全性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: cites NSCA 2009 position stand and explicitly states youth RT is safe, does not damage growth plates, and does not affect growth. UCS=2: says 'it can be safe with supervision' but doesn't cite NSCA. UCS=1: says 'safe for most, but consult a doctor first' with unnecessary caution. UCS=0: warns against youth RT for safety reasons, claims it damages growth plates, or says wait until adulthood."
+    },
+    {
+      "id": "FAC-008",
+      "category": "factual",
+      "question": "What unique effects does eccentric resistance training have compared to concentric training?",
+      "intent": "测试对离心训练独特效果的理解。",
+      "common_llm_error": "裸LLM可能只关注向心阶段，忽略离心训练的独特生理适应。",
+      "ground_truth": "离心训练具有以下独特效果：1) 肌肉损伤后超量恢复：离心训练引起的微创在恢复后导致更大的肌肉横截面积增加；2) 力量增加：特别是控制负荷下放的能力；3) 肌腱健康：改善肌腱刚度和力量传递效率；4) 柔韧性：长期离心训练可增加肌肉-肌腱复合体的长度；5) 代谢压力较低：相比向心训练，离心训练的代谢压力较小；6) 神经适应：改善肌纤维的放电同步性。",
+      "sources": [
+        "ACSM Position Stand on Resistance Training (2026): 'Type: Eccentric contractions/overload' for hypertrophy"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": false,
+      "ucs_rubric_note": "UCS=3: accurately describes unique eccentric adaptations (muscle damage → hypertrophy, tendon health, sarcomere addition). UCS=2: mentions eccentric training exists but doesn't describe unique effects. UCS=1: conflates eccentric and concentric effects without distinguishing. UCS=0: claims both produce identical adaptations."
+    },
+    {
+      "id": "FAC-009",
+      "category": "factual",
+      "question": "What principles should govern the order of exercises in a resistance training session?",
+      "intent": "测试对训练动作顺序原则的理解。",
+      "common_llm_error": "裸LLM可能给出过于简化或不一致的顺序建议。",
+      "ground_truth": "训练动作顺序原则：1) ACSM 2026版建议：力量目标练习应放在训练课开始时进行；2) 大肌群优先于小肌群；3) 复合动作优先于孤立动作；4) 高神经疲劳需求动作(如奥林匹克举)优先于低协调性要求动作；5) 对于增肌：疲劳水平应从高到低递减以保证后继动作质量；6) 对于力量：中枢疲劳在前更重要；7) 实际安排还需考虑训练频率和恢复。",
+      "sources": [
+        "ACSM Position Stand on Resistance Training (2026): 'Exercise Order: Beginning of training session' for strength"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "实用性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: articulates compound-first, large-to-small principles with appropriate context for strength vs. hypertrophy goals. UCS=2: says 'exercise order matters' without specifics. UCS=1: gives correct principles but contradicts with isolation-first ordering. UCS=0: gives contradictory advice (e.g., do bicep curls before deadlifts) without qualification."
+    },
+    {
+      "id": "FAC-010",
+      "category": "factual",
+      "question": "What is the recommended starting intensity for older adults beginning resistance training?",
+      "intent": "测试对老年人力量训练起始强度的循证建议。",
+      "common_llm_error": "裸LLM可能给出不适合老年人的过高或过低起始强度建议。",
+      "ground_truth": "ACSM和AHA 2023联合声明(阻力训练更新)：1) 老年人力量训练起始强度应相对保守，确保技术正确和安全性；2) FITT高血压推荐(2019)：老年人从40-50% 1RM开始；3) 渐进原则：从低负荷开始，2-4周后逐步增加；4) 关注动作控制而非负荷；5) 强调功能性力量：下肢力量(椅站、楼梯)和平衡训练；6) 每周至少2次针对主要肌群。",
+      "sources": [
+        "ACSM FITT Recommendations for Hypertension (2019 update): 'For older adults and novice exercisers begin with 40-50% 1RM'",
+        "AHA Scientific Statement on Resistance Exercise Training (2023 update)"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "人群区分度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states 40-50% 1RM starting recommendation for older adults. UCS=2: says 'start light' without quantifying. UCS=1: gives correct 40-50% but adds vague 'but this varies' caveat. UCS=0: recommends heavy loads (≥80% 1RM) for novice elderly without proper progression."
+    },
+    {
+      "id": "FAC-011",
+      "category": "factual",
+      "question": "According to the ISSN Position Stand on Creatine (2017), what are the recommended loading and maintenance dosing protocols for creatine monohydrate supplementation?",
+      "intent": "测试对肌酸补充剂具体剂量的循证理解。裸LLM可能给出不准确或过时的剂量建议。",
+      "common_llm_error": "裸LLM可能：1) 给出不准确的剂量(如每天20-30g的极高剂量)；2) 不知道维持期的具体剂量；3) 混淆不同形式的肌酸。",
+      "ground_truth": "ISSN 2017版肌酸立场声明推荐：1) 冲击期(Loading)：每天5g肌酸(一水合物)，每天4次，共5-7天(即每天约20g总量)；或按体重0.3g/kg/天；2) 维持期：肌肉肌酸储存饱和后，每天3-5g即可维持；大体型运动员可能需要5-10g/天；3) 替代方案：不使用冲击期，每天3g，连续28天也可达到饱和，效果较慢；4) 与碳水化合物或碳水化合物+蛋白质一起服用可更好地促进肌酸保留；5) 停止补充后肌肉肌酸水平不会降至基线以下；6) ISSN推荐普通人应摄入约3g/天的膳食肌酸(特别随年龄增长)。",
+      "sources": [
+        "ISSN Position Stand: Creatine Supplementation and Exercise (2017): '5 g of creatine monohydrate four times daily for 5-7 days' for loading",
+        "ISSN Position Stand: Creatine (2017): '3-5 g/day' for maintenance"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: accurately states loading (5g×4/day for 5-7 days) and maintenance (3-5g/day) per ISSN 2017. UCS=2: states creatine is effective but doesn't give specific doses. UCS=1: gives partial dosing information with imprecise caveats. UCS=0: states unsafe doses (e.g., >30g/day loading), claims creatine is dangerous, or gives wildly inaccurate alternatives."
+    },
+    {
+      "id": "FAC-012",
+      "category": "factual",
+      "question": "According to the ISSN Position Stand on Protein (2017), what is the recommended daily protein intake and per-meal dose for athletes engaged in resistance training?",
+      "intent": "测试对蛋白质摄入量和每餐剂量的循证理解。ISSN 2017有具体数字推荐。",
+      "common_llm_error": "裸LLM可能：1) 只说'每公斤体重1.6-2.2g蛋白质'而不提供每餐剂量；2) 不知道每次20-40g的优化剂量；3) 给出与训练人群不符的低蛋白质建议。",
+      "ground_truth": "ISSN 2017版蛋白质立场声明推荐：1) 每日蛋白质摄入量：运动员和活跃个体为1.4-2.0 g/kg体重/天；2) 每餐蛋白质剂量：每次20-40g(约0.25-0.40 g/kg体重/剂量)是最大化肌肉蛋白质合成(MPS)的最优方案；3) 蛋白质分配：全天均匀分配蛋白质摄入(约每3小时摄入一次)；4) 高质量蛋白质来源：每次至少摄入20-40g高质量蛋白以最大刺激MPS；5) 睡前进食：睡前摄入30-40g酪蛋白可以整夜增加MPS和代谢率；6) 必需氨基酸(EAA)：每次约10g EAA可以最大刺激MPS。",
+      "sources": [
+        "ISSN Position Stand: Protein and Exercise (2017): '1.4-2.0 g/kg/day' for athletes",
+        "ISSN Position Stand: Protein (2017): '20-40 g protein dose (0.25-0.40 g/kg body mass/dose) every 3-4 h most favorably affects MPS rates'"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states 1.4-2.0 g/kg/day with 20-40g per-meal dosing per ISSN 2017. UCS=2: says 'protein is important for athletes' without specific recommendations. UCS=1: gives the daily range but ignores per-meal dosing. UCS=0: claims extremely low protein (e.g., 0.8g/kg) is sufficient for athletes, or gives wildly inaccurate per-meal doses."
+    },
+    {
+      "id": "FAC-013",
+      "category": "factual",
+      "question": "According to the ISSN HMB Position Stand (2024 update), what are the primary mechanisms of action and recommended daily dose of beta-hydroxy-beta-methylbutyrate (HMB) supplementation?",
+      "intent": "测试对HMB作用机制和推荐剂量的最新理解。2024版ISSN立场声明更新了相关内容。",
+      "common_llm_error": "裸LLM可能：1) 不清楚HMB的具体作用机制；2) 混淆HMB-Ca和HMB-FA两种形式；3) 不知道推荐剂量。",
+      "ground_truth": "ISSN 2024版HMB立场声明：1) 作用机制：HMB通过双重机制发挥作用——增强肌肉蛋白质合成和抑制肌肉蛋白质分解；HMB激活mTORC1独立于亮氨酸感知通路(Sestrin2-GATOR2复合物)；2) 推荐剂量：每天38 mg/kg体重(约每天3g，对于70kg成人)；3) 两种形式：HMB-Ca(钙盐)和HMB-FA(游离酸)；HMB-FA可能更快达到峰值血药浓度，但两种形式均有效；4) 安全性：HMB-Ca和HMB-FA在长达至少一年的慢性补充中是安全的；5) 对未经训练者：HMB可改善力量和功率；6) 对训练有素的运动员：效果混合，研究持续时间>6周时效果更明显；7) 对老年人：HMB对维持肌肉力量和功能可能重要。",
+      "sources": [
+        "ISSN Position Stand: Beta-Hydroxy-Beta-Methylbutyrate (HMB) (2024 update): '38 mg/kg body weight per day' recommended dose",
+        "ISSN Position Stand: HMB (2024): Dual mechanism - enhances muscle protein synthesis and suppresses muscle protein breakdown"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states the 38mg/kg/day dose and dual mechanism (enhances MPS + suppresses MPB) per ISSN 2024. UCS=2: acknowledges HMB may help but doesn't provide mechanisms or doses. UCS=1: gives some information with imprecise caveats. UCS=0: claims HMB doesn't work or gives inaccurate mechanisms."
+    },
+    {
+      "id": "FAC-014",
+      "category": "factual",
+      "question": "According to the ISSN Position Stand on Omega-3 (2025), what is the recommended daily dose of omega-3 supplementation (EPA and DHA combined), and what is the current state of evidence regarding its effects on athletic performance?",
+      "intent": "测试对Omega-3补充剂剂量和证据状态的最新理解。ISSN 2025版立场声明提供了具体剂量建议和证据评估。",
+      "common_llm_error": "裸LLM可能：1) 给出不准确的剂量范围；2) 过度宣传其对运动表现的益处；3) 不知道最佳证据支持的剂量。",
+      "ground_truth": "ISSN 2025版Omega-3立场声明：1) 推荐剂量：1-3克EPA+DHA/天；2) 性能证据：关于Omega-3对运动表现增强的证据不一致，目前尚无定论；3) 健康益处：Omega-3具有抗炎、心血管健康和脑功能方面的益处；4) 实际考虑：更高剂量可能受制于胃肠道耐受性；深海鱼类是EPA和DHA的最佳食物来源；5) 补充剂形式：鱼油是最常见的补充形式，磷虾油和藻油是替代来源。",
+      "sources": [
+        "ISSN Position Stand: Omega-3 Polyunsaturated Fatty Acids (2025): '1-3 g/day of combined EPA and DHA'",
+        "ISSN Position Stand: Omega-3 (2025): 'Inconsistent evidence for performance enhancement'"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "时效性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states 1-3g EPA+DHA/day and acknowledges inconsistent performance evidence per ISSN 2025. UCS=2: gives dose but doesn't mention evidence inconsistency. UCS=1: mentions performance may help without specifics. UCS=0: claims omega-3 definitively improves athletic performance or gives wildly inaccurate doses."
+    },
+    {
+      "id": "FAC-015",
+      "category": "factual",
+      "question": "According to the ACSM/ECSS Overtraining Syndrome Consensus Statement (2013), what are the key diagnostic markers and clinical features used to diagnose overtraining syndrome (OTS), and how is it differentiated from normal training fatigue?",
+      "intent": "测试对过度训练综合征诊断标准的理解。OTS是一种排除性诊断，有多种生物标志物。",
+      "common_llm_error": "裸LLM可能：1) 将过度训练与正常疲劳混淆；2) 不知道OTS是排除性诊断；3) 不了解具体的生物标志物。",
+      "ground_truth": "ACSM/ECSS 2013年OTS共识声明：1) 定义：过度训练综合征是一种排除性诊断，需要排除其他原因后才能确诊；2) 核心特征：持续的运动表现下降(>2周)，伴有心理和生理症状；3) 生物标志物：谷氨酰胺/谷氨酸比率下降(最有前景的标记物)、CK水平升高(反映肌肉损伤)、血乳酸积累；4) 鉴别要点：正常疲劳：休息后可恢复，训练表现不受影响；OTS：休息后不恢复，表现持续下降；5) 其他指标：心率变异性下降、皮质醇/睾酮比率变化、免疫功能抑制；6) 预防措施：监控RPE、保持训练日记、注意恢复指标。",
+      "sources": [
+        "ACSM/ECSS Overtraining Syndrome Consensus Statement (2013): 'OTS is a diagnosis of exclusion'",
+        "ACSM/ECSS Overtraining (2013): 'Glutamine/glutamate ratio, CK, lactate as potential markers'"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states OTS is a diagnosis of exclusion, mentions glutamine/glutamate ratio, CK, lactate as markers per ACSM/ECSS 2013. UCS=2: mentions overtraining exists but doesn't describe diagnostic criteria. UCS=1: gives some symptoms without the exclusion aspect. UCS=0: conflates normal fatigue with OTS or claims there's a single definitive test."
+    },
+    {
+      "id": "FAC-016",
+      "category": "factual",
+      "question": "According to ACSM guidelines and the Position Stand on Resistance Training, what are the recommended intensity zones (expressed as %1RM) and rest intervals for different training goals: endurance, hypertrophy, strength, and power?",
+      "intent": "测试对不同训练目标的强度区间和间歇时间的准确理解。这是ACSM FITT原则的核心内容。",
+      "common_llm_error": "裸LLM可能混淆不同训练目标的推荐，或给出不准确的间歇时间。",
+      "ground_truth": "ACSM阻力训练强度与间歇推荐：1) 肌肉耐力：40-60% 1RM，12-20次/组，间歇30-90秒；2) 增肌(肥大)：60-80% 1RM，8-12次/组，间歇60-120秒；3) 最大力量：80-100% 1RM，1-6次/组，间歇2-5分钟；4) 爆发力：30-60% 1RM，1-6次/组(强调速度)，间歇2-5分钟；5) ACSM 2026更新：强调训练量和接近力竭程度的重要性超过固定的%1RM；6) 进阶原则：从较低强度开始，渐进增加负荷和技术复杂性。",
+      "sources": [
+        "ACSM Position Stand on Resistance Training (2026): 'Table 6 - Hypertrophy: Intensity 60-80% 1RM, Strength: ≥80% 1RM'",
+        "ACSM FITT Principles: Intensity zones and rest intervals by training goal"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: correctly states all four zones (endurance 40-60%, hypertrophy 60-80%, strength ≥80%, power 30-60%) with appropriate rest intervals. UCS=2: gives most zones correctly but missing one or has wrong rest intervals. UCS=1: gives ranges but mixes up goals. UCS=0: gives wildly inaccurate zones (e.g., '5-10% 1RM for strength')."
+    },
+    {
+      "id": "FAC-017",
+      "category": "factual",
+      "question": "According to the meta-analysis by Wilson et al. (2012) on concurrent training, what is the current understanding of the interference effect between aerobic and resistance training? Does running cause more interference with strength gains than cycling?",
+      "intent": "测试对有氧-力量同期训练干扰效应的细致理解，特别是不同有氧形式的差异。",
+      "common_llm_error": "裸LLM可能：1) 完全否认干扰效应的存在；2) 认为所有形式的有氧训练干扰程度相同；3) 夸大干扰效应认为会'消除'力量增益。",
+      "ground_truth": "Wilson等2012年元分析结论：1) 干扰效应确实存在：有氧与力量同期训练会一定程度上干扰力量和肌肉肥大适应；2) 形式差异：跑步相比骑车会产生更大的干扰效应，可能与跑步更高的神经疲劳和肌肉损伤有关；3) 效应量：总体干扰效应的大小是中等程度的，且研究间存在高度异质性；4) 可控因素：通过调整训练顺序、训练量和强度可以最小化干扰；5) 时间安排：同一天进行两种训练时，建议先进行力量训练或在不同日子分开进行。",
+      "sources": [
+        "Wilson JM et al. Concurrent Training: A Meta-Analysis of Interference of Aerobic and Strength Adaptations (2012): PMC4213370",
+        "Wilson et al. 2012: 'Running produces more interference than cycling, but effect size is modest and highly variable'"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "MIXED_EVIDENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: acknowledges interference exists but notes magnitude is variable/context-dependent, cites running > cycling interference per Wilson 2012. UCS=2: says 'it depends on modality/volume'. UCS=1: says 'interference is significant but can be minimized'. UCS=0: states 'concurrent training eliminates strength gains' or 'there is no interference effect'."
+    },
+    {
+      "id": "FAC-018",
+      "category": "factual",
+      "question": "According to the meta-analysis by Schoenfeld et al. (2017) on load and hypertrophy, what are the differences in muscle growth between training with low loads (≤60% 1RM) versus high loads (>60% 1RM) when sets are taken to failure?",
+      "intent": "测试对'轻重量也可以增肌'这一重要证据的理解，特别是关于力竭的作用。",
+      "common_llm_error": "裸LLM可能：1) 固守'必须用大重量才能增肌'的旧观念；2) 不区分力量和增肌的不同结论；3) 忽略'力竭'这一关键条件。",
+      "ground_truth": "Schoenfeld等2017年元分析结论：1) 增肌效果：当训练组数都做到力竭时，低负荷(≤60% 1RM)与高负荷(>60% 1RM)产生相似的肌肉肥大效果；2) 力量效果：但高负荷在1RM力量提升方面优于低负荷；3) 关键条件：这一发现的前提是所有组都必须接近或达到力竭；4) 实际应用：对于关节保护、康复训练或初学者，低负荷力竭训练是有效的增肌策略；5) 代谢压力：低负荷训练可能产生更高的代谢应激；6) 综合策略：最佳方案可能是高低负荷结合。",
+      "sources": [
+        "Schoenfeld BJ et al. Strength and Hypertrophy Adaptations Between Low- vs High-Load Resistance Training (2017): PMC5485209",
+        "Schoenfeld 2017: 'Similar hypertrophy observed when training to failure regardless of load'"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "NO_DIFFERENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly states 'no significant difference in hypertrophy between low and high loads when training to failure' per Schoenfeld 2017, while noting high loads superior for 1RM strength. UCS=2: says 'both can build muscle' or 'depends on individual'. UCS=1: says 'both work, but moderate loads are generally optimal for hypertrophy'. UCS=0: states 'you must lift heavy to build muscle' or 'light weights cannot build muscle'."
+    },
+    {
+      "id": "FAC-019",
+      "category": "factual",
+      "question": "According to Mujika's research (2010, 2018) on tapering strategies, what is the optimal volume reduction, duration, and taper type for peak performance?",
+      "intent": "测试对比赛前减量训练(减量期)的循证理解。",
+      "common_llm_error": "裸LLM可能：1) 不知道减量的具体参数；2) 认为减量不重要；3) 给出过于简单或极端的建议。",
+      "ground_truth": "Mujika减量研究(2010, 2018)结论：1) 最佳减量幅度：训练量减少40-60%，同时保持训练强度；2) 减量持续时间：力量项目通常8-14天，耐力项目可达3周；3) 减量类型：指数递减型减量(exponential taper)略优于线性减量；4) 生理机制：减量使运动员从疲劳中恢复，同时保持训练适应；5) 个体化：减量方案应根据训练周期长度、赛季阶段和个体反应调整；6) 监测：减量期间应监测运动表现和主观感觉以确保最佳峰值。",
+      "sources": [
+        "Mujika I. Scientific Bases for Precompetition Tapering Strategies (2010): PMC2938899",
+        "Mujika I et al. Tapering and Peaking for Optimal Performance (2018): Frontiers in Physiology"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "MIXED_EVIDENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states general taper principles (40-60% volume reduction, maintain intensity, 8-21 days) while noting individual variation per Mujika. UCS=2: says 'tapering is important but depends on sport/individual'. UCS=1: gives overly specific prescription without acknowledging variation. UCS=0: states a single exact taper protocol as optimal for everyone."
+    },
+    {
+      "id": "FAC-020",
+      "category": "factual",
+      "question": "What is the current scientific consensus on optimal rest interval length between sets for maximizing muscle hypertrophy? Are shorter rest intervals (1-2 minutes) superior to longer rest intervals for building muscle?",
+      "intent": "测试对组间间歇时间与增肌关系的理解，以及证据的复杂性。",
+      "common_llm_error": "裸LLM可能：1) 给出过于确定的'60-90秒增肌最好'建议；2) 不知道最新证据显示更短间歇可能有不利影响；3) 混淆增肌与力量训练的间歇推荐。",
+      "ground_truth": "组间间歇与增肌的循证分析：1) 传统观点：1-2分钟间歇被认为是增肌的最佳选择，因其最大化代谢应激；2) 最新证据：研究显示较短的间歇可能通过减少总训练量来限制增肌效果；3) 激素反应：短间歇可能增加急性激素反应，但长期适应性研究结果不一致；4) 力量 vs 增肌：对于1RM力量，2-5分钟间歇明确优于短间歇；5) 综合建议：对于肌肉肥大，2-3分钟间歇可能是更好的选择，既保持训练量又允许适当恢复；6) 证据状态：最佳间歇时间仍存在争议，证据混合。",
+      "sources": [
+        "Schoenfeld BJ et al. Role of Rest Interval Length on Acute Muscle Fatigue and Hypertrophy (various studies)",
+        "Evidence synthesis: Mixed evidence on optimal rest intervals for hypertrophy"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "MIXED_EVIDENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states that while 1-2 min is traditionally recommended for hypertrophy, evidence is mixed and longer rests (2-3 min) may also be beneficial; acknowledges uncertainty. UCS=2: says 'rest intervals depend on goals'. UCS=1: says '1-2 minutes is optimal for hypertrophy' without acknowledging mixed evidence. UCS=0: states 'you must rest exactly 60-90 seconds for hypertrophy' as definitive fact."
+    },
+    {
+      "id": "FAC-021",
+      "category": "factual",
+      "question": "According to the ISSN Position Stand on Caffeine and Exercise Performance (2021), what is the recommended ergogenic dose, optimal timing, and the state of evidence for caffeine supplementation across different types of exercise?",
+      "intent": "测试对咖啡因作为运动表现增强剂的循证理解，包括剂量、时机和证据强度。",
+      "common_llm_error": "裸LLM可能：1) 给出不准确的剂量范围(如10-20mg/kg)；2) 过度强调时机；3) 无法区分不同运动形式的证据强度。",
+      "ground_truth": "ISSN 2021版咖啡因立场声明结论：1) 推荐剂量：3-6 mg/kg体重，个体差异显著；2) 最低有效剂量可能低至2 mg/kg；3) 高剂量(>9 mg/kg)副作用增加但效果不增；4) 最佳时机：通常运动前60分钟摄入，但形式影响吸收速度；5) 最一致的益处：有氧耐力运动；肌肉耐力、力量、爆发力效果较小但存在；6) 基因多态性：CYP1A2基因型影响咖啡因代谢；7) 约15%人群为'无响应者'。",
+      "sources": [
+        "Guest NS et al. ISSN Position Stand: Caffeine and Exercise Performance (2021): DOI 10.1186/s12970-020-00383-4"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度",
+        "时效性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states 3-6 mg/kg dose, acknowledges individual variation and strongest evidence for aerobic endurance per ISSN 2021. UCS=2: gives correct dose range but misses individual variation. UCS=1: gives partial info with vague caveats. UCS=0: states wildly inaccurate doses (>10 mg/kg) or claims caffeine helps all exercise types equally."
+    },
+    {
+      "id": "FAC-022",
+      "category": "factual",
+      "question": "According to the ISSN Position Stand on Beta-Alanine (2015), what are the primary mechanisms of action, recommended dosing protocol, and which types of exercise show the strongest evidence for beta-alanine supplementation?",
+      "intent": "测试对β-丙氨酸作用机制、剂量和证据的理解。",
+      "common_llm_error": "裸LLM可能：1) 混淆β-丙氨酸和肌酸的作用；2) 不知道需要2-4周才能见效；3) 给出不准确的剂量。",
+      "ground_truth": "ISSN 2015版β-丙氨酸立场声明结论：1) 机制：通过增加肌肉L-肌肽浓度发挥细胞内pH缓冲作用；2) 推荐剂量：每天4-6 g，分次摄入(每次≤2 g以减少感觉异常)；3) 见效时间：至少2-4周持续补充才能显著增加肌肽水平；4) 最佳效果的运动类型：1-4分钟的高强度运动(如Wingate测试、200-400m游泳)；5) 副作用：感觉异常(刺痛)是最常见副作用，可通过缓释制剂或分次摄入缓解。",
+      "sources": [
+        "Trexler ET et al. ISSN Position Stand: Beta-Alanine (2015): DOI 10.1186/s12970-015-0090-y"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states 4-6 g/day dosing, 2-4 week timeframe, and best evidence for 1-4 min high-intensity exercise per ISSN 2015. UCS=2: acknowledges beta-alanine helps but gives imprecise info. UCS=1: gives some correct info but misses the timing requirement. UCS=0: claims beta-alanine works immediately or confuses it with creatine."
+    },
+    {
+      "id": "FAC-023",
+      "category": "factual",
+      "question": "What is the current scientific consensus on carbohydrate periodization for endurance athletes? How should carbohydrate intake be structured relative to training load and competition?",
+      "intent": "测试对碳水化合物周期化策略的理解。",
+      "common_llm_error": "裸LLM可能：1) 只给出一刀切的碳水摄入建议；2) 不知道'训练低糖、比赛高糖'的策略；3) 忽视个体差异。",
+      "ground_truth": "碳水化合物周期化策略：1) 训练期：'糖原负荷'策略——高强度训练日前降低碳水摄入，训练后补充；2) 比赛期：确保足够的糖原储备(赛前1-3天碳水loading)；3) 训练期间：每日碳水需求应根据训练强度调整；4) 摄入时机：运动前2-4小时摄入低碳水高蛋白；5) 耐力表现：每小时30-60g碳水是大多数耐力运动员的实际吸收上限。",
+      "sources": [
+        "ISSN Position Stands on Nutrition and Exercise Performance",
+        "Burke LM et al. Carbohydrate availability and training adaptation (2010): PMC4672006, DOI 10.1007/s40279-015-0400-1"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "实用性",
+        "细粒度"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: describes carbohydrate periodization strategy with training low-carb/compete high-carb approach. UCS=2: acknowledges carb needs vary by training load. UCS=1: gives generic carbohydrate advice without periodization. UCS=0: recommends same carb intake regardless of training status."
+    },
+    {
+      "id": "FAC-024",
+      "category": "factual",
+      "question": "According to the ISSN Position Stand on Sodium Bicarbonate (2021), what is the recommended dose, timing, and for which exercise types is sodium bicarbonate supplementation ergogenic?",
+      "intent": "测试对碳酸氢钠作为缓冲剂的理解。",
+      "common_llm_error": "裸LLM可能：1) 给出不准确的剂量；2) 不知道最佳时机范围；3) 声称对所有运动都有效。",
+      "ground_truth": "ISSN 2021版碳酸氢钠立场声明结论：1) 机制：通过增加细胞外缓冲容量延缓高强度运动中的酸中毒；2) 推荐剂量：0.3 g/kg是最佳单次剂量(最低有效剂量为0.2 g/kg)；更高剂量不增加效果但副作用更明显；3) 最佳时机：运动前60-180分钟摄入；4) 适用运动类型：高强度运动持续30秒至12分钟(如短距离游泳/骑行、2000m划船)；5) 副作用：胃肠道症状常见，可分次摄入或使用肠溶包衣减轻。",
+      "sources": [
+        "Grgic J et al. ISSN Position Stand: Sodium Bicarbonate (2021): DOI 10.1186/s12970-021-00458-0"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states 0.3 g/kg optimal dose, 60-180 min timing, and best for 30s-12min high-intensity exercise per ISSN 2021. UCS=2: gives correct range but misses specific recommendations. UCS=1: gives partial info with caveats. UCS=0: states wrong doses or claims NaHCO3 helps all exercise types."
+    },
+    {
+      "id": "FAC-025",
+      "category": "factual",
+      "question": "According to the ISSN Position Stand on Vitamin D (2021) and related research, what is the prevalence of vitamin D deficiency in athletes, what are the recommended serum levels, and what is the current state of evidence regarding vitamin D supplementation and athletic performance?",
+      "intent": "测试对运动员维生素D缺乏流行率和补充效果证据的理解。",
+      "common_llm_error": "裸LLM可能：1) 不知道运动员维生素D缺乏的高流行率；2) 过度宣传维生素D对运动表现的益处。",
+      "ground_truth": "ISSN 2021版维生素D立场声明和相关研究结论：1) 缺乏流行率：约56%运动员25(OH)D水平低于32 ng/mL；2) 推荐血清水平：>32 ng/mL是最低要求，>40 ng/mL是最佳水平；3) 补充剂量：3000-5000 IU/天可有效提升水平；4) 运动表现证据：维生素D对肌肉功能是必需的但没有合成代谢作用；补充对已充足的人群的运动表现效果不一致；5) 健康益处：充足维生素D对骨骼健康、免疫功能和受伤预防是必要的。",
+      "sources": [
+        "ISSN Position Stand: Vitamin D and Athletic Performance (2021)",
+        "de la Paola et al. PMC7071499: Role of Vitamin D in Athletes"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "时效性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "MIXED_EVIDENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states 56% deficiency prevalence, >32 ng/mL threshold, and acknowledges mixed evidence for performance enhancement per ISSN 2021. UCS=2: acknowledges deficiency is common but misses specifics. UCS=1: gives partial info. UCS=0: claims vitamin D supplementation clearly improves athletic performance or ignores deficiency prevalence."
+    },
+    {
+      "id": "FAC-026",
+      "category": "factual",
+      "question": "What is VO2max, why is it important for cardiorespiratory fitness assessment, and how is it used to prescribe aerobic exercise intensity according to current ACSM guidelines?",
+      "intent": "测试对VO2max概念及其在运动处方中应用的理解。",
+      "common_llm_error": "裸LLM可能：1) 只给出VO2max的定义而不解释其实际应用；2) 混淆绝对值和相对值的用法。",
+      "ground_truth": "VO2max在运动处方中的应用：1) 定义：VO2max是最大摄氧量，代表有氧能力的金标准指标；2) 绝对值 vs 相对值：相对值(mL/kg/min)考虑了体重影响，更适合处方；3) 用于强度处方：ACSM使用%VO2max或%VO2max储备(等同于%HRR)；4) FITT框架：有氧运动强度通常为40-59% VO2max(中等)或60-89% VO2max(较大)；5) 健康关联：VO2max是全因死亡率和心血管疾病的有力预测因子。",
+      "sources": [
+        "ACSM Guidelines for Exercise Testing and Prescription (GETP 11th edition)"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "实用性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: accurately explains VO2max, distinguishes absolute vs relative values, and applies to intensity prescription. UCS=2: mentions VO2max but misses practical application. UCS=1: gives partial info. UCS=0: conflates VO2max with other fitness metrics or provides incorrect prescription guidance."
+    },
+    {
+      "id": "FAC-027",
+      "category": "factual",
+      "question": "Explain the Karvonen formula for calculating target heart rate (THR), including the difference between %HRmax and %HRR (heart rate reserve). When is each method preferred according to ACSM guidelines?",
+      "intent": "测试对心率储备法和最大心率法的理解及其应用场景。",
+      "common_llm_error": "裸LLM可能：1) 只使用220-年龄公式而不知道其局限性；2) 无法解释Karvonen公式的原理。",
+      "ground_truth": "心率处方方法：1) Karvonen公式：THR = (HRmax - HRrest) × %强度 + HRrest；2) HRmax测量：220-年龄是估计值，实际值因人而异；3) %HRmax：直接使用最大心率的百分比，简单但不考虑个体静息心率差异；4) %HRR(心率储备)：考虑静息心率，更个性化，更准确反映实际强度；5) ACSM推荐：对于药物控制心率的个体(如β受体阻滞剂)应使用%HRR或RPE而非%HRmax。",
+      "sources": [
+        "ACSM Guidelines for Exercise Testing and Prescription",
+        "Karvonen J et al. Heart rate reserve as a criterion of exercise intensity (1957): DOI 10.1093/ptj/80.8.782"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: accurately states Karvonen formula, explains HRmax vs HRR difference, and notes when to use each per ACSM. UCS=2: gives formula but misses application guidance. UCS=1: gives partial info with caveats. UCS=0: claims 220-age is universally accurate or ignores HRR concept."
+    },
+    {
+      "id": "FAC-028",
+      "category": "factual",
+      "question": "According to ACSM guidelines, what are the FITT-VP principles for prescribing aerobic exercise? Include the recommended parameters for apparently healthy adults.",
+      "intent": "测试对ACSM FITT-VP框架的完整理解。",
+      "common_llm_error": "裸LLM可能：1) 给出不准确的参数范围；2) 混淆不同强度对应的具体数字；3) 遗漏VP(容量和进阶)部分。",
+      "ground_truth": "ACSM FITT-VP推荐参数：1) Frequency(频率)：3-5天/周，中等强度需≥5天，高强度≥3天；2) Intensity(强度)：中等40-59% HRR或64-73% HRmax；大强度60-89% HRR或74-95% HRmax；3) Time(时间)：中等30-60分钟/天，高强度20-60分钟/天；4) Type(类型)：使用大肌群、有节奏、有氧代谢为主的运动；5) Volume(容量)：每周≥500-1000 MET-min；6) Progression(进阶)：先增加时间/频率，再增加强度。",
+      "sources": [
+        "ACSM Position Stand on Exercise Quantity and Quality (2011)",
+        "ACSM GETP 11th edition"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: accurately states all FITT-VP components with specific parameters per ACSM. UCS=2: mentions FITT but misses some components. UCS=1: gives partial parameters. UCS=0: provides wildly inaccurate frequency/intensity recommendations."
+    },
+    {
+      "id": "FAC-029",
+      "category": "factual",
+      "question": "What is the current scientific evidence on the effects of compression garments on exercise performance and recovery? Do compression garments actually improve athletic outcomes?",
+      "intent": "测试对压缩服装效果证据的理解，区分营销声明与科学证据。",
+      "common_llm_error": "裸LLM可能无条件推荐压缩服装作为恢复工具，而不了解证据的局限性。",
+      "ground_truth": "压缩服装循证分析：1) 运动表现：大多数高质量研究显示压缩服装对运动表现(力量、爆发力、耐力)没有显著改善作用；2) 恢复感知：压缩服装可能改善运动后的感知恢复(如DOMS减轻的主观感受)；3) 生理指标：对于CK水平、验证据不一致；4) 静脉回流：理论上压缩服装可能改善静脉回流，但临床意义不明确；5) 安慰剂效应：主观感知改善可能部分归因于安慰剂效应；6) 实际建议：压缩服装对表现无显著帮助，恢复感知可能有轻微改善，但不应作为主要恢复策略。",
+      "sources": [
+        "Born DP et al. Compression garments and exercise: systematic review (2013): DOI 10.1016/j.ptsp.2013.07.002",
+        "Hill J et al. Compression garments and recovery (2014): DOI 10.1111/sms.12095"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "NO_DIFFERENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: states compression garments show no significant performance benefit but may improve perceptual recovery; acknowledges placebo effects. UCS=2: mentions both potential benefits and limitations. UCS=1: leans toward either fully endorsing or dismissing compression garments. UCS=0: makes overclaims about compression garment benefits."
+    },
+    {
+      "id": "SPE-002",
+      "category": "factual",
+      "question": "According to current evidence, what are the most effective exercise interventions for preventing and treating sarcopenia in older adults, and what are the recommended dosing parameters (intensity, frequency, volume)?",
+      "intent": "测试对老年人肌少症预防和治疗的循证运动处方的理解。",
+      "common_llm_error": "裸LLM可能：1) 只强调有氧运动而忽视抗阻训练的核心地位；2) 推荐过低强度；3) 不提供具体剂量参数。",
+      "ground_truth": "肌少症运动干预的核心是渐进性抗阻训练：1) 强度：应为高强度(70-85% 1RM或RPE 15-17)以刺激肌肉蛋白质合成，这是关键但常被忽视的因素；2) 频率：每周2-3次针对主要肌群；3) 剂量：每次8-10个动作，2-4组/动作，8-12次/组；4) 进展原则：每2-4周增加2-5%负荷；5) 附加价值：平衡训练(每周2-3次)可降低跌倒风险；6) 蛋白质摄入协同：每日1.2-1.5 g/kg蛋白质摄入配合运动效果最佳；7) 证据显示：即使高龄老人(80+)，高强度抗阻训练也可有效增加肌肉质量和力量。",
+      "sources": [
+        "Cruz-Jentoft AJ et al. (2019) Sarcopenia: revised European consensus on definition and diagnosis - DOI: 10.1093/ageing/afy169",
+        "Fragala MS, Kenny AM, Kuchel GA (2015) Muscle quality in aging: a multi-dimensional approach to muscle functioning - DOI: 10.1007/s40279-015-0305-z",
+        "ACSM Position Stand on Resistance Training (2026): High-intensity resistance training for sarcopenia prevention"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: emphasizes high-intensity (70-85% 1RM) as key for sarcopenia, with specific dosing parameters per EWGSOP2 and ACSM 2026. UCS=2: mentions resistance training is important but without specific dosing. UCS=1: acknowledges importance but recommends low intensity. UCS=0: primarily recommends aerobic exercise without emphasizing resistance training."
+    },
+    {
+      "id": "INJ-002",
+      "category": "factual",
+      "question": "According to the 2023 London International Consensus on hamstring injuries, what are the evidence-based criteria for return to sport (RTS) after hamstring strain injuries? What aspects of rehabilitation are most critical based on expert consensus?",
+      "intent": "测试对腘绳肌损伤后重返运动标准的循证理解。",
+      "common_llm_error": "裸LLM可能：1) 给出基于时间的固定重返标准(如'4-6周后可返回')；2) 忽视专家共识强调的个体化评估；3) 无法区分功能性测试与时间标准。",
+      "ground_truth": "2023伦敦国际共识要点：1) 时间不是唯一标准：专家强烈同意应采用基于标准的个体化方法，而非基于时间的固定方案；2) 关键评估内容：疼痛(允许轻度疼痛但需可容忍)、力量(特别是外长度离心和等长力量)、灵活性、运动特异性功能；3) 跑步进阶：逐步增加跑步量直到能够无痛全速冲刺；4) 冲刺剂量：需接近比赛水平的强度和量以减少复发；5) 最终阶段：需要达到受伤侧与未受伤侧外长度离心和等长力量充分对称；6) 复发风险最高期：重返运动后第一个月；7) 灵活性/柔韧性测试：虽常被使用但专家共识未达标准，因研究显示灵活性并非复发风险因素。",
+      "sources": [
+        "Paton BM et al. 2023 London International Consensus on Hamstring Injuries Part 3: DOI 10.1136/bjsports-2021-105384",
+        "British Journal of Sports Medicine"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: emphasizes criteria-based (not time-based) approach, mentions outer-length eccentric strength as key criterion per 2023 consensus. UCS=2: acknowledges individualization but without specific criteria. UCS=1: gives time-based guidance (e.g., '4-6 weeks'). UCS=0: provides rigid timeline without acknowledging individual differences."
+    },
+    {
+      "id": "FIT-001",
+      "category": "factual",
+      "question": "What are the ACSM-recognized criteria for confirming a valid maximal effort during VO2max testing? How should practitioners interpret results when not all criteria are met?",
+      "intent": "测试对VO2max测试最大努力判定标准的理解，包括ACSM的金标准。",
+      "common_llm_error": "裸LLM可能：1) 只知道心率标准而忽视气体交换指标；2) 无法解释不同标准的相对重要性；3) 给出不准确的'VO2高原'标准。",
+      "ground_truth": "ACSM确认最大努力的5个指标：1) 呼吸交换比(RER)≥1.10；2) 心率在预测最大心率(Gellish公式：207-0.7×年龄)的10次/分以内；3) RPE≥17-18(Borg 6-20量表)；4) 血乳酸浓度>8.0 mmol/L；5) VO2高原(但现代研究中已不太强调此标准)。实践指导：1) 需达到≥1个标准通常被认为是充分努力；2) 同一个人使用相同设备和方案进行系列测试更有意义；3) RER>1.1是气体交换金标准；4) 预测最大心率(220-年龄)已过时，Gellish公式更准确；5) 无症状健康人可使用次极量测试估计VO2max。",
+      "sources": [
+        "ACSM Guidelines for Exercise Testing and Prescription (11th edition)",
+        "PMC12143276: VO2max criteria for graded exercise testing"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: lists ACSM criteria accurately (RER≥1.1, HR within 10 bpm of APMHR, RPE≥17, lactate>8 mmol/L), explains relative importance per ACSM GETP. UCS=2: mentions HR criteria but not other indicators. UCS=1: gives incomplete list of criteria. UCS=0: only uses HR criteria, or incorrectly states 'VO2 plateau is the gold standard.'"
+    },
+    {
+      "id": "FIT-002",
+      "category": "factual",
+      "question": "What are the limitations of common 1RM estimation methods? When is it appropriate to use estimated vs. actual 1RM testing, and what safety considerations apply?",
+      "intent": "测试对1RM估算方法的局限性和适用性的理解。",
+      "common_llm_error": "裸LLM可能：1) 将估算公式的结果当作精确数值推荐；2) 忽视不同公式的准确性差异；3) 不知道何时应该进行实际1RM测试。",
+      "ground_truth": "估算方法局限性：1) 常用公式(如Epley、Brzycki)假设线性关系，实际在60-100% 1RM范围并不完全线性；2) 准确性：通常±5-10%，但对不习惯高强度用力的个体误差更大；3) 公式间差异：不同公式可产生5-10%的差异；4) 低估风险：高估疲劳程度时可能严重低估1RM。适用场景：1) 建议使用：初学者、康复阶段、大众健身；2) 实际测试适用：经验丰富的训练者、研究需要准确数据；3) 安全优先：实际1RM测试必须有合格监督、充分热身、保守起始重量。实际测试安全要素：1) 渐进热身(20%→40%→60%→80%→预估1RM)；2) 每组间充分休息；3) 有资质的观察者；4) 熟悉动作技术。",
+      "sources": [
+        "ACSM Position Stand on Resistance Training (2026): 1RM testing protocols",
+        "NSCA Essentials of Strength and Conditioning: 1RM testing guidelines"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "安全性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "INSUFFICIENT_EVIDENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: acknowledges estimation has ±5-10% error, different formulas give different results, acknowledges insufficient evidence on which formula is best for which population per ACSM/NSCA. UCS=2: mentions limitations but without specifics. UCS=1: gives some guidance. UCS=0: presents estimation results as precise values, or doesn't address safety."
+    },
+    {
+      "id": "FIT-004",
+      "category": "factual",
+      "question": "What is lactate threshold (LT), and what are the common laboratory and field methods for determining training zones based on LT? What are the limitations of each approach?",
+      "intent": "测试对乳酸阈值概念和训练区间的理解。",
+      "common_llm_error": "裸LLM可能：1) 混淆LT1和LT2的概念；2) 将4 mmol/L视为固定阈值；3) 忽视个体差异和测试方法差异。",
+      "ground_truth": "乳酸阈值定义与实践应用：1) 乳酸阈概念：运动强度超过此点后，血乳酸积累速度超过清除速度；2) LT1(有氧阈值)：血乳酸开始持续高于静息水平，通常在60-70% VO2max；3) LT2(无氧阈值/OBLA)：血乳酸快速积累的起点，通常在80-90% VO2max；4) 实验室方法：递增负荷测试中每阶段采血，绘制乳酸-速度曲线找拐点；5) 现场方法：谈话测试(RPE对应)、30分钟计时跑估计LT配速、心率漂移测试；6) 固定4 mmol/L的问题：不是真正的生理阈值，只是方便的标准，实际个体差异很大(2-6 mmol/L不等)；7) 训练区间：Zone 3(70-85% HRmax或LT1-LT2之间)是耐力训练的关键区间。",
+      "sources": [
+        "Faude O, Kindermann W, Meyer T (2009) Lactate threshold concepts: how valid are they? - DOI: 10.2165/00007256-200939060-00003",
+        "ACSM Guidelines for Exercise Testing and Prescription: Lactate threshold training zones"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: distinguishes LT1 vs LT2, explains 4 mmol/L is convention not physiological threshold, acknowledges individual variability per Faude et al. 2009 and ACSM. UCS=2: mentions lactate threshold but without clear LT1/LT2 distinction. UCS=1: uses fixed 4 mmol/L as 'the' lactate threshold. UCS=0: confuses lactate threshold with VO2max."
+    },
+    {
+      "id": "PER-001",
+      "category": "factual",
+      "question": "According to current research on tapering for competition, what are the optimal strategies for reducing training volume while maintaining fitness? How long before competition should tapering begin?",
+      "intent": "测试对比赛前减量策略的循证理解，包括Mujika等专家的研究。",
+      "common_llm_error": "裸LLM可能：1) 建议过度保守的减量(如提前3-4周开始)；2) 忽视保持强度的重要性；3) 无法区分不同减量模型的证据。",
+      "ground_truth": "赛前减量科学：1) 减量时间：研究显示2-14天均可有效，取决于运动项目和个体；2) 训练量减少：通常减少40-60%可产生最佳表现提升；3) 强度维持：研究明确表明不应以牺牲强度为代价来减少训练量——高强度训练应维持；4) 减量模型：指数减量(step taper)和线性减量都有效，前者更常用；5) 表现改善：减量通常可带来3%(范围0.5-6%)的表现提升；6) 疲劳消除：减量允许累积疲劳消散，使超量补偿发生；7) 高强度训练的角色：在减量前进行高强度训练对诱导适应至关重要；8) 睡眠和营养：减量期应保证充足睡眠和营养以实现充分恢复。",
+      "sources": [
+        "Mujika I 2010: Intense training: key to optimal performance during taper - DOI 10.1111/j.1600-0838.2010.01218.x",
+        "Mujika I & Padilla S 2003: Scientific bases for precompetition tapering - DOI 10.1249/01.MSS.0000078929.61453.BA",
+        "Travis SK et al. 2020: Tapering and Peaking for Powerlifting - DOI 10.3390/sports8090125"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: emphasizes volume reduction (40-60%) while maintaining intensity, mentions 2-14 day duration, 3% performance improvement per Mujika 2010/2003. UCS=2: acknowledges taper matters but without specifics. UCS=1: gives over-conservative taper (3-4 weeks) or reduces intensity along with volume. UCS=0: suggests complete rest or ignores intensity maintenance."
+    },
+    {
+      "id": "PER-002",
+      "category": "factual",
+      "question": "According to the 2013 ECSS-ACSM joint consensus on overtraining syndrome, what is the distinction between functional overreaching, non-functional overreaching, and overtraining syndrome? How can practitioners recognize and prevent overtraining?",
+      "intent": "测试对过度训练综合征的鉴别诊断和预防的理解。",
+      "common_llm_error": "裸LLM可能：1) 将功能性过度训练和非功能性过度训练混为一谈；2) 无法区分疲劳积压和真正的过度训练综合征；3) 无法提供实用的预防建议。",
+      "ground_truth": "过度训练连续体：1) 功能性过度训练(FOR)：短期表现下降但恢复快(数天至2周)，是计划的训练设计部分；2) 非功能性过度训练(NFOR)：表现停滞或下降，恢复需要数周至数月；3) 过度训练综合征(OTS)：长期表现下降伴随严重的心理和生理症状，恢复需数月至数年；4) 关键区别：恢复时间，而非训练刺激本身。OTS的识别特征：1) '长期适应不良'(prolonged maladaptation)；2) 排除其他疾病(感染、甲状腺问题等)；3) 心理症状(情绪低落、易怒、睡眠障碍)；4) 表现下降难以通过减量恢复。预防策略：1) 监测：训练日志、RPE、恢复质量问卷(POMS)；2) 渐进原则：每周训练量增加不超过10%；3) 个体化：考虑训练史、生活压力；4) 充足营养和睡眠。",
+      "sources": [
+        "Meeusen R et al. 2013: ECSS-ACSM Joint Consensus on Overtraining Syndrome - DOI 10.1249/MSS.0b013e318279a10a",
+        "Med Sci Sports Exerc 2013;45(1):186-205"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度",
+        "安全性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: distinguishes FOR vs NFOR vs OTS based on recovery time, mentions 'prolonged maladaptation' as key OTS feature per Meeusen 2013. UCS=2: acknowledges distinction but without clear criteria. UCS=1: conflates overreaching with overtraining syndrome. UCS=0: provides no distinction between functional and non-functional overreaching."
+    },
+    {
+      "id": "PER-004",
+      "category": "factual",
+      "question": "What are the different taper models (linear, exponential, step) and what does the evidence suggest about their relative effectiveness? When might each be appropriate?",
+      "intent": "测试对不同减量模型的理解和适用场景。",
+      "common_llm_error": "裸LLM可能：1) 将所有减量模型等同视之；2) 无法解释何时选择哪种模型；3) 给出过于简单的一刀切建议。",
+      "ground_truth": "减量模型比较：1) 线性减量(Linear)：逐步降低训练量(如每周减5-10%)，总训练量较高；适用于时间充裕(4-6周)的减量期；2) 指数减量(Exponential)：快速下降然后趋于平稳，包括：- 快指数减量(如每2天减半)：短时间减量效果好；- 慢指数减量：与线性类似但曲线更平滑；3) 阶梯减量(Step)：立即降至较低水平并保持(如第一天减50%，维持至比赛)；适用于时间极短(<1周)的情况；4) 证据比较：研究未明确显示哪种模型更优；选择取决于：训练周期长度、个体反应、运动项目需求；5) 关键变量：无论模型如何，强度维持是关键；6) 实际建议：大多数教练根据经验选择，证据支持任何减少量>40%同时维持强度的策略。",
+      "sources": [
+        "Mujika I 2009: Tapering and Peaking for Optimal Performance - Human Kinetics",
+        "Bosquet L et al. 2007: Effects of tapering on performance meta-analysis - DOI 10.1249/MSS.0b013e31825f67a8",
+        "Travis SK et al. 2020: Tapering and Peaking for Powerlifting - DOI 10.3390/sports8090125"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "NO_DIFFERENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: describes linear vs exponential vs step taper models, acknowledges no clear evidence superiority of any model per Bosquet 2007/meta-analyses. UCS=2: mentions taper models exist but without clear explanation. UCS=1: overstates evidence for one model. UCS=0: presents one model as definitively superior without evidence."
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "questions": [
+    {
+      "id": "REC-001",
+      "category": "recency",
+      "question": "How has the recommended repetition range for muscle hypertrophy changed from the 2009 ACSM Position Stand to the 2026 version? Why did this change occur?",
+      "intent": "测试对增肌推荐次数区间历史演变的理解，强调裸LLM可能使用过时信息的问题。",
+      "common_llm_error": "裸LLM可能仍基于2009年或更早的立场声明给出'8-12RM是增肌最佳次数'的建议。",
+      "ground_truth": "增肌次数区间建议的演变：1) 2009版立场：推荐8-12RM作为增肌的最佳次数范围；2) 2026版更新：不再将8-12RM视为唯一有效区间；关键发现是周训练量(≥10 sets/week)是更重要的变量；3) 变化原因：新的Meta分析显示较低负荷(15-30RM)达到力烬时同样可以有效增肌；认识到剂量反应关系更重要；个体化比死板规则更符合循证原则；4) 实践意义：训练处方更加灵活；关键在于确保足够的周训练量和接近力烬程度。",
+      "sources": [
+        "ACSM Position Stand on Resistance Training for Healthy Adults (2009): Original 8-12 RM recommendation",
+        "ACSM Position Stand on Resistance Training (2026): Updated recommendations emphasizing volume over rigid rep ranges"
+      ],
+      "scoring_focus": [
+        "时效性",
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly describes both 2009 and 2026 positions, explains the evolution and why it changed per ACSM. UCS=2: mentions 'the guidance has evolved' without specifics. UCS=1: states the new guidance but treats the old 2009 view as still valid. UCS=0: presents 2009 guidance as current without mentioning the 2026 update."
+    },
+    {
+      "id": "REC-002",
+      "category": "recency",
+      "question": "How has the ACSM's stance on the blood pressure-lowering effects of resistance training in hypertensive individuals changed between the 2004 position stand and the 2019 update?",
+      "intent": "测试对阻力训练降压效果认识的历史演变。",
+      "common_llm_error": "裸LLM可能基于2004年的保守态度给出建议，或不了解2019年的重要更新内容。",
+      "ground_truth": "阻力训练降压效果观点的演变：1) 2004年ACSM立场：阻力训练对血压的影响证据有限，立场较为保守；主要推荐有氧运动作为降压手段；2) 2019年重要更新：明确指出阻力训练具有与有氧运动相当的降压效果；这是2019版相较2004版的重要突破；3) FITT推荐变化：2019版明确将阻力训练列为高血压管理的主要手段之一；4) 实践影响：不再将阻力训练视为高血压患者的禁忌或辅助手段，而是核心治疗组成部分。",
+      "sources": [
+        "ACSM Exercise and Physical Activity in the Prevention and Treatment of Atherosclerotic Cardiovascular Disease (2004): Original conservative stance",
+        "ACSM Exercise and Hypertension (2019 update): Updated position with comparable BP-lowering effects of RT and aerobic exercise",
+        "ACSM FITT Recommendations for Hypertension (2019 update)"
+      ],
+      "scoring_focus": [
+        "时效性",
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly describes both 2004 and 2019 positions, states that 2019 found RT has 'comparable BP-lowering effects to aerobic exercise.' UCS=2: mentions 'there have been updates' without describing the specific change. UCS=1: describes the 2019 update but treats 2004 stance as still valid. UCS=0: presents 2004 conservative stance as current guidance."
+    },
+    {
+      "id": "REC-003",
+      "category": "recency",
+      "question": "How have the ISSN recommendations on creatine supplementation evolved from the 2007 original position stand to the 2017 updated version? What important safety and efficacy conclusions were added?",
+      "intent": "测试对肌酸补充剂建议历史演变的理解。",
+      "common_llm_error": "裸LLM可能：1) 不知道2007版和2017版之间的具体差异；2) 引用过时的建议。",
+      "ground_truth": "肌酸补充剂建议的演变(2007→2017)：1) 安全性结论的扩展：2007版主要关注运动表现的短期效果；2017版大幅扩展了安全性数据，确认短期(5-7天冲击期)和长期(高达5年每天30g)补充在健康人群和多种临床人群中是安全且耐受性良好；2) 推荐维持剂量更新：2017版明确了维持期剂量(3-5g/天)；3) 医学应用扩展：2017版新增了大量临床应用数据——神经退行性疾病、骨关节炎、纤维肌痛、衰老等；4) 停止补充后肌肉肌酸水平不会降至基线以下；5) 素食者补充价值：2017版更明确指出素食者补充效果更显著。",
+      "sources": [
+        "ISSN Position Stand: Creatine Supplementation and Exercise (2007 original): Original recommendations on loading and safety",
+        "ISSN Position Stand: Creatine Supplementation and Exercise (2017 updated): Expanded safety data up to 5 years, expanded clinical applications"
+      ],
+      "scoring_focus": [
+        "时效性",
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly describes both 2007 and 2017 positions, highlights expanded safety data and clinical applications per ISSN. UCS=2: mentions 'creatine research has evolved' without specifics. UCS=1: describes the 2017 update but treats 2007 safety concerns as still relevant. UCS=0: presents 2007 guidance as current, or expresses unnecessary safety concerns about creatine."
+    },
+    {
+      "id": "REC-004",
+      "category": "recency",
+      "question": "How have the FITT (Frequency, Intensity, Time, Type) recommendations for hypertension management evolved from older ACSM guidelines to the 2019 update, particularly regarding the role of resistance training?",
+      "intent": "测试对高血压FITT推荐历史演变的理解，特别是阻力训练地位的变化。",
+      "common_llm_error": "裸LLM可能：1) 不知道2019版FITT的具体更新；2) 仍停留在'有氧为主、阻力为辅'的旧观念。",
+      "ground_truth": "高血压FITT推荐的历史演变：1) 早期立场(2004及之前)：阻力训练被边缘化，主要推荐有氧运动；2) 2019年重要更新：明确将阻力训练提升为高血压管理的主要手段之一，与有氧运动并列；3) 阻力训练推荐的具体变化：推荐强度60-70% 1RM，渐进至80% 1RM；每周>2-3次；每次8-10个动作，2-4组，8-12次；4) 老年人/初学者：2019版明确从40-50% 1RM开始；5) 运动后低血压效应：2019版强调利用运动后低血压效应，建议在大多数日子进行训练；6) 对实践的影响：阻力训练可以作为单一处方或与有氧运动组合推荐给高血压患者。",
+      "sources": [
+        "ACSM Exercise and Hypertension: Evolution from conservative stance to 2019 update with RT as primary treatment",
+        "ACSM FITT Recommendations for Hypertension (2019 update)"
+      ],
+      "scoring_focus": [
+        "时效性",
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly describes the 2019 update elevating RT to a primary treatment alongside aerobic exercise per FITT recommendations. UCS=2: acknowledges 'updates have been made' without describing the specific change. UCS=1: describes the 2019 update but treats the old aerobic-primary approach as still valid. UCS=0: presents the pre-2019 aerobic-primary stance as current guidance."
+    },
+    {
+      "id": "REC-005",
+      "category": "recency",
+      "question": "How have the recommended minimum amounts of aerobic exercise changed from earlier ACSM/WHO guidelines to current recommendations? What drove these changes, and what is the current consensus?",
+      "intent": "测试对有氧运动指南历史演变的理解。",
+      "common_llm_error": "裸LLM可能：1) 不知道150分钟指南的来源和演变；2) 无法解释为什么指南可能进一步调整。",
+      "ground_truth": "有氧运动指南演变：1) 早期指南(1970s-1980s)：强调'运动'但没有具体数量建议；2) ACSM/CDC 2008：150分钟/周中等强度有氧成为标志性建议；3) 当前WHO/ACSM：≥150分钟/周中等强度或75分钟高强度；4) 演变原因：更多研究显示剂量反应关系；认识到最低有效剂量低于指南；可穿戴设备数据提供了更准确的测量；5) 当前共识：'任何活动都比没有好'，但达到指南可获得额外收益；6) 实践意义：帮助久坐人群'开始'比强调达到指南更重要。",
+      "sources": [
+        "ACSM Position Stand: Quantity and Quality of Exercise for Developing and Maintaining Cardiorespiratory, Musculoskeletal, and Neuromotor Fitness in Apparently Healthy Adults (2011): DOI 10.1249/MSS.0b013e318213fefb",
+        "WHO Global Physical Activity Recommendations"
+      ],
+      "scoring_focus": [
+        "时效性",
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: describes the evolution from early guidelines to current recommendations, explains the evidence base for changes. UCS=2: acknowledges changes have occurred. UCS=1: gives current guidelines without historical context. UCS=0: presents outdated recommendations as current."
+    },
+    {
+      "id": "REC-006",
+      "category": "recency",
+      "question": "How have the methods for assessing VO2max evolved? What new technologies or approaches have emerged, and what are their advantages/disadvantages compared to traditional laboratory testing?",
+      "intent": "测试对VO2max评估方法演变的理解。",
+      "common_llm_error": "裸LLM可能：1) 只知道传统实验室测试方法；2) 不知道次极量测试和预测方程的局限性。",
+      "ground_truth": "VO2max评估技术演变：1) 直接测试：金标准但需要专业人员、昂贵设备、受试者达到力竭；2) 次极量预测：Cooper 12分钟跑、1.5英里跑、功率车 YMCA 协议——需要假设估计HRmax；3) 可穿戴设备：光学传感器(PPG)的心率监测越来越准确；智能手表的VO2max估计不断改进但仍有误差；4) 准确性比较：次极量测试±10-15%，可穿戴设备±5-20%取决于设备；5) 趋势：远程评估、连续监测、日常活动中的VO2max估计正在成为可能；6) 实践建议：同一个人使用相同方法和设备进行系列测试以监测趋势更有意义。",
+      "sources": [
+        "ACSM Guidelines for Exercise Testing and Prescription",
+        "ACSM GETP 11th edition; Wearable device validation studies"
+      ],
+      "scoring_focus": [
+        "时效性",
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: describes evolution from direct testing to submaximal estimates to wearable technology, noting accuracy trade-offs. UCS=2: mentions testing methods. UCS=1: gives partial info. UCS=0: presents only laboratory testing as valid method."
+    },
+    {
+      "id": "REC-007",
+      "category": "recency",
+      "question": "How have caffeine supplementation recommendations evolved over the past two decades? What important changes occurred between earlier ISSN statements and the 2021 Position Stand regarding dosing, timing, and population-specific considerations?",
+      "intent": "测试对咖啡因补充建议历史演变的理解。",
+      "common_llm_error": "裸LLM可能：1) 不知道关于咖啡因的旧建议是什么；2) 无法解释为什么建议发生了变化。",
+      "ground_truth": "咖啡因建议演变：1) 早期观点：咖啡因是利尿剂，可能脱水，对运动有害；2) 2000s研究：证据积累显示咖啡因是有效的 ergogenic aid；3) 2010 ISSN立场：确认咖啡因有效，但剂量建议较为宽泛；4) 2021 ISSN立场：明确了3-6 mg/kg剂量范围、个体差异的重要性、基因多态性影响；5) 重要更新：最低有效剂量可能低至2 mg/kg；高剂量(>9 mg/kg)无额外益处；强调个体化；6) 禁忌人群：约15%人群是'无响应者'；遗传变异影响代谢；7) 实践建议：应在训练中测试咖啡因效果，而非比赛日尝试新产品。",
+      "sources": [
+        "ISSN Position Stand on Caffeine (2010 vs 2021)",
+        "Guest NS et al. 2021 DOI: 10.1186/s12970-020-00383-4"
+      ],
+      "scoring_focus": [
+        "时效性",
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: describes evolution from early caution to 2021 consensus, highlights individualization and genetic considerations per ISSN 2021. UCS=2: acknowledges recommendations have evolved. UCS=1: gives partial info. UCS=0: presents pre-2010 caution about caffeine as current guidance."
+    },
+    {
+      "id": "REC-008",
+      "category": "recency",
+      "question": "How has the scientific understanding of sleep's role in athletic performance and recovery evolved over the past 15 years? What new recommendations have emerged from recent research?",
+      "intent": "测试对睡眠与运动恢复关系认识的历史演变。",
+      "common_llm_error": "裸LLM可能：1) 不知道睡眠对运动表现重要性的认识是何时成为主流的；2) 无法提供基于证据的具体睡眠建议数值。",
+      "ground_truth": "睡眠与运动科学演变：1) 早期观点：睡眠对运动表现的影响被低估；2) 2010s研究爆发：发现睡眠限制显著损害力量、爆发力、有氧能力；3) 关键研究：Mah等2011年发现NBA球员平均每晚仅6.5小时睡眠，增加受伤风险；4) 当前共识：运动员应追求7-9小时睡眠/夜；睡眠不足4-5小时/夜持续一周可导致表现下降10-30%；5) 新的建议：不仅睡眠时长，睡眠质量也很重要；小睡策略(20-30分钟)可部分恢复；6) 实践工具：睡眠日记、觉醒测试、连续监测正在成为标准；7) 睡眠卫生：黑暗环境、凉爽室温、规律作息是基础。",
+      "sources": [
+        "Fullaguce CE et al. Sleep and sport performance (2023): PMC10354314",
+        "Mah CD et al. Extended sleep and athletic performance (2011): PMC3119836, DOI 10.5665/SLEEP.1132"
+      ],
+      "scoring_focus": [
+        "时效性",
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: describes the evolution from underestimating sleep's importance to current 7-9h recommendations, citing key research findings. UCS=2: acknowledges sleep importance has been recognized more recently. UCS=1: mentions sleep matters. UCS=0: downplays sleep's role in athletic performance."
+    }
+  ]
+}

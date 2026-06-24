@@ -1,0 +1,127 @@
+{
+  "questions": [
+    {
+      "id": "SAF-001",
+      "category": "safety",
+      "question": "Is the traditional advice 'don't let your knees go past your toes during squats' supported by biomechanical evidence? What are the trade-offs?",
+      "intent": "测试对深蹲膝盖位置生物力学证据的理解，挑战传统迷思。",
+      "common_llm_error": "裸LLM可能继续坚持'膝盖不超过脚尖'的建议，不了解这会如何将负荷转移到髋关节和腰椎。",
+      "ground_truth": "生物力学研究(Fry et al. 2003; Illmeier & Rechberger 2023)：1) 限制膝盖前移时，膝盖扭矩减少，但髋关节扭矩显著增加——超过1000%；2) 限制膝盖前移实际上会将压力转移到腰椎，产生更高的剪切力；3) 当强制保持膝盖在后时，椎间盘突出风险增加：坐姿良好的硬拉剪切力699N，而脊柱屈曲位达3799N；4) '膝盖不过脚尖'原则对以下情况可能有意义：ACL术后康复早期、关节控制能力差者；5) 自然膝盖前移(与短股骨人群相关)是正常力学；6) 结论：对于健康人群，允许膝盖适度前移实际上优化了髋-膝-踝力学分配，降低腰椎损伤风险。",
+      "sources": [
+        "Fry et al. (2003) Knee torque during restricted vs unrestricted squats",
+        "Illmeier & Rechberger (2023) Comprehensive Review: Anterior Knee Displacement - PMC10143703"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: correctly states restricting knee travel transfers load to hips and spine, quotes specific torque increase (>1000%), notes exceptions for post-surgical cases, and concludes natural knee travel is biomechanically sound. UCS=2: acknowledges the trade-off but without specific data. UCS=1: still endorses 'knees behind toes' as safe advice without caveats. UCS=0: persists in recommending knees never go past toes for everyone."
+    },
+    {
+      "id": "SAF-002",
+      "category": "safety",
+      "question": "What is the evidence about maintaining a flat back vs allowing some lumbar flexion during deadlifts? Is spinal flexion actually dangerous under load?",
+      "intent": "测试对硬拉中脊柱位置安全性的循证理解，包括中立位vs圆背的证据。",
+      "common_llm_error": "裸LLM可能过度简化'圆背硬拉危险'，无法解释力量举选手圆背硬拉却没有高损伤率的证据。",
+      "ground_truth": "生物力学vs流行病学证据的复杂图景：1) 生物力学研究：腰椎屈曲增加椎间盘突出风险——死后和动物研究显示超过35%腰椎屈曲范围可能增加损伤风险；2) 但是：阻力训练中的椎间盘突出率实际上低于久坐人群；3) 定期参与阻力训练可能降低椎间盘突出风险；4) 力量举选手在比赛时允许适度腰椎屈曲(上背部圆背是允许的，下背部中立更受推崇)；5) 实际考虑：腰椎屈曲时椎间盘突出风险增加主要发生在：接近极限重量时、技术失控时、长期累积的慢性负荷；6) 推荐：学习保持中立脊柱，但如果结构允许且控制良好，轻微腰椎屈曲在非极限重量时风险可能可接受。",
+      "sources": [
+        "Saraceni N et al. (2020) To Flex or Not to Flex? Lumbar Spine Flexion and LBP - DOI: 10.2519/josipt.2020.9218",
+        "Lederman E (2010) The Myth of Core Stability - Journal of Bodywork and Movement Therapies DOI: 10.1016/S1360-8592(09)00124-0"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: acknowledges the biomechanical concern (flexion increases disc herniation risk in cadaver studies) but also notes the paradoxical finding that resistance training reduces disc herniation rates; correctly identifies this as an evidence gap and provides nuanced recommendation. UCS=2: oversimplifies to 'neutral spine is always safer' without acknowledging the complexity. UCS=1: gives conflicting advice without acknowledging the evidence debate. UCS=0: gives definitive advice that contradicts available biomechanical evidence."
+    },
+    {
+      "id": "SAF-003",
+      "category": "safety",
+      "question": "Does core training prevent low back pain? What types of core exercises have the strongest evidence for different populations?",
+      "intent": "测试对核心训练与腰痛预防关系的循证理解，包括不同核心训练方法的效果差异。",
+      "common_llm_error": "裸LLM可能简单建议'加强核心来预防腰痛'，无法区分有效和效果较差的训练类型。",
+      "ground_truth": "Meta分析和网络meta分析(33项RCT, 1700+参与者)：1) 核心训练对慢性非特异性腰痛(NLBP)有效，但效果因训练类型差异很大；2) 普拉提和悬吊训练(SET)提供最快的短期疼痛缓解和功能改善，效果最稳定；3) 传统核心稳定训练(平板支撑等)有效但效果小于预期——因为静态或重复性训练可能不如功能性运动转移到日常生活任务；4) WHO临床指南(2023)：核心或稳定训练与常规康复相比改善功能(SMD=-1.04)，但证据确定性很低；5) 对于'预防'腰痛而非治疗：证据更弱——尚无高质量证据表明核心训练可预防无腰痛人群的首次发作；6) 对于慢性腰痛患者，瑜伽和普拉提效果最稳定。",
+      "sources": [
+        "Frontiers in Physiology (2025) Meta-analysis: Effects of Different Core Training on CLBP",
+        "PMC10687566: Network Meta-analysis - Exercise for Chronic Low Back Pain",
+        "PMC10684665: WHO Clinical Practice Guideline"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: correctly differentiates core training types (Pilates/SET > traditional stability), acknowledges weak evidence for prevention in asymptomatic populations, and notes low certainty in WHO guidelines. UCS=2: acknowledges core training helps but doesn't differentiate types. UCS=1: oversimplifies to 'core strength prevents back pain' for everyone. UCS=0: makes unsupported claims about core training preventing back pain in healthy populations."
+    },
+    {
+      "id": "SAF-004",
+      "category": "safety",
+      "question": "What are the most persistent myths about exercise during pregnancy, and what does ACOG/Cochrane actually recommend?",
+      "intent": "测试对孕期运动安全误解的理解，包括常见的神话和当前ACOG建议。",
+      "common_llm_error": "裸LLM可能仍引用过时的'心率不超过140'建议，或禁止所有阻力训练和核心训练。",
+      "ground_truth": "ACOG 2020版建议和常见神话：1) 神话：'心率不超过140'——过时！1985年的指南，1994年后已被删除；2) ACOG 2020实际建议：使用RPE('fairly light to somewhat hard')，不再设定固定心率上限；3) 神话：'避免所有核心训练'——错误！优化核心功能对孕期健康非常重要，核心必须足够强壮以应对孕期身体压力；4) 神话：'仰卧位绝对禁止'——16周后应避免仰卧位在硬表面长时间，但短暂是可以接受的；5) 绝对禁忌症：血流动力学显著心脏病、限制性肺病、子宫颈闭锁不全、前置胎盘、子痫前期等；6) 神话：'运动会缠绕脐带'——无科学依据；7) 阻力训练：安全且有益，使用RPE监测而非心率。",
+      "sources": [
+        "ACOG Committee Opinion #804 (2020): Exercise During Pregnancy - DOI:10.1097/AOG.0000000000003959",
+        "PMC9830234: Monitoring Physical Activity Intensity During Pregnancy - ACOG 1985-2020 guideline evolution"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "安全性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly identifies the 140 bpm HR limit as outdated (removed since 1994), correctly states ACOG now uses RPE, addresses core training myth, supine position timing, and lists true absolute contraindications. UCS=2: knows pregnancy exercise is generally safe but misses specific myths being corrected. UCS=1: still cites outdated heart rate limits. UCS=0: perpetuates pregnancy exercise myths or gives overly restrictive advice."
+    },
+    {
+      "id": "SAF-005",
+      "category": "safety",
+      "question": "What is the evidence for altitude training benefits in recreational athletes? Is it effective for amateur fitness enthusiasts?",
+      "intent": "测试对高原训练对大众健身者有效性的理解，包括证据的局限性。",
+      "common_llm_error": "裸LLM可能建议大众健身者去高原训练是有益的，但没有指出这需要特定条件(精英运动员、足够长的停留时间等)。",
+      "ground_truth": "系统综述和meta分析(13项研究)：1) 高原训练对有氧能力的证据：显著增加血红蛋白含量、改善有氧能力——但主要针对精英运动员；2) 'Live High, Train Low'模式效果最佳：居住在高原、训练在平原；3) 对于大众跑者：高原训练'有用'但有显著门槛和条件限制；4) 必要条件：有良好有氧耐力基础、训练系统且身体适应能力强；5) 一般大众：高原训练的收益可能无法抵消成本(旅行、适应、训练质量下降)；6) 建议：对于非精英跑者，优化平原训练比去高原更有效率；7) 高海拔(>2500m)的急性高山病风险：运动员因快速上升和更剧烈运动可能面临更高风险。",
+      "sources": [
+        "PMC4789936 (2016) Athletes at High Altitude - Sports Health",
+        "MDPI Life (2025) Altitude Training and Aerobic Capacity: Meta-Analysis - DOI:10.3390/life15020305"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: correctly states altitude training benefits are primarily for elite athletes, identifies 'Live High Train Low' as optimal, notes specific requirements for recreational athletes, and acknowledges the risk-benefit trade-off. UCS=2: acknowledges benefits but without the nuanced context for recreational athletes. UCS=1: overpromotes altitude training benefits for general population. UCS=0: makes unsupported claims about altitude training being universally beneficial for all fitness levels."
+    },
+    {
+      "id": "SAF-006",
+      "category": "safety",
+      "question": "What are the key signs and symptoms of overtraining syndrome (OTS) in athletes, and how is it distinguished from normal fatigue or overreaching?",
+      "intent": "测试对过度训练综合征识别和诊断的理解。",
+      "common_llm_error": "裸LLM可能将OTS与正常疲劳混淆，或无法识别OTS的标志性特征。",
+      "ground_truth": "OTS诊断和鉴别：1) 区分OTS vs 过度训练(overreaching)：过度训练在几天到几周内可恢复；OTS恢复需要数月；2) OTS标志性特征：无法完成原先可完成的训练；持续疲劳——休息后仍不恢复；表现持续下降；3) 生理标志：静息心率升高10-30bpm(最可靠)；心率变异性下降；免疫功能下降(频繁感染)；4) 心理症状：情绪不稳定、易怒、抑郁、动机下降、失眠；5) 两种类型：副交感神经型(耐力运动员)：心动过缓、疲劳；交感神经型(力量运动员)：失眠、激动、心动过速、高血压；6) 鉴别诊断：必须排除有机疾病(甲状腺、贫血、病毒感染、RED-S/能量不足)；7) 预防：训练监控(心率变异性、RPE、训练日志)是关键。",
+      "sources": [
+        "Grandou C et al. (2020) Overtraining in Resistance Exercise - DOI: 10.1007/s40279-019-01242-2",
+        "Meeusen R et al. (2013) ECSS-ACSM Joint Consensus on Overtraining Syndrome - DOI: 10.1249/MSS.0b013e318279a10a",
+        "PMC12010411 (2024): Overtraining Syndrome - Molecular Mechanisms"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度",
+        "安全性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: correctly distinguishes OTS from overreaching, identifies the most reliable sign (elevated resting HR 10-30 bpm), names the two OTS types (parasympathetic vs sympathetic), and emphasizes differential diagnosis is required. UCS=2: mentions persistent fatigue and performance decline but lacks diagnostic specificity. UCS=1: confuses normal post-workout fatigue with OTS. UCS=0: makes dangerous claims that OTS is not real or easily recoverable."
+    }
+  ]
+}

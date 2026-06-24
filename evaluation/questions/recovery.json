@@ -1,0 +1,187 @@
+{
+  "questions": [
+    {
+      "id": "RCV-001",
+      "category": "recovery",
+      "question": "What is the evidence for the effects of sleep deprivation on exercise performance and recovery? Include specific performance decrements.",
+      "intent": "测试对睡眠剥夺对运动表现和恢复影响的循证理解，包含具体数据。",
+      "common_llm_error": "裸LLM可能泛泛说'睡眠重要'但无法提供具体性能下降数据，或低估睡眠剥夺的影响程度。",
+      "ground_truth": "系统综述和meta分析(69项研究,959名男性参与者)：1) 睡眠剥夺显著降低运动表现(总效应: %Δ=-7.56%, 95%CI -11.9 to -3.13)；2) 力量表现下降：最大力量(1RM)下降5-10%；3) 耐力：至力竭时间减少10-15%；4) 无氧能力：功率输出下降7-10%；5) 反应时间减慢10-20%；6) 每多清醒1小时，性能下降约0.4%；7) 慢性睡眠限制(<7小时/夜持续数周)：累积性能下降20-30%，受伤风险增加60%；8) 机制：单次通宵睡眠可使睾酮下降近25%，糖原再合成能力降低40%，生长激素分泌受损。",
+      "sources": [
+        "Reed et al. (2022) Effects of Acute Sleep Loss on Physical Performance: Systematic Review and Meta-Analysis - PubMed 35708888",
+        "MDPI J Clin Med (2025) Sleep and Athletic Performance: A Multidimensional Review - DOI:10.3390/jcm1407606"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: provides specific performance decrements (e.g., 7.56% overall, strength -5-10%, endurance -10-15%, reaction time -10-20%) and notes the 0.4% per hour awake relationship. UCS=2: acknowledges sleep deprivation impacts performance with some data but incomplete. UCS=1: mentions 'sleep is important' without specific performance metrics. UCS=0: either dismisses sleep's importance or provides wildly inaccurate figures."
+    },
+    {
+      "id": "RCV-002",
+      "category": "recovery",
+      "question": "What does the evidence say about sleep extension as a recovery strategy for athletes? Can 'catch-up sleep' compensate for chronic sleep debt?",
+      "intent": "测试对睡眠延长作为恢复策略的理解，以及补觉的有效性证据。",
+      "common_llm_error": "裸LLM可能建议'周末多睡来补觉'，但证据显示慢性睡眠债无法完全通过补觉弥补。",
+      "ground_truth": "睡眠延长的证据：1) 精英运动员研究(6-7周，每晚10小时睡眠)：15米冲刺成绩提升17%，转身时间加快10%，情绪评分提升21%；2) 一般运动人群：睡眠延长至8-10小时，各项指标改善10-20%；3) 至力竭时间增加10-20%；4) 主观疲劳感(RPE)下降10-15%；5) 补觉的限制：虽然睡眠延长可以改善当前表现，但慢性睡眠债的部分负面影响(如糖原储存、激素平衡)可能需要更长时间才能完全恢复；6) 最佳实践：不是'补觉'而是'预防性保证充足睡眠'——建议运动员每晚8-10小时。",
+      "sources": [
+        "MDPI J Clin Med (2025) Sleep and Athletic Performance: Multidimensional Review",
+        "Mah CD et al. (2011) Extended sleep and athletic performance - DOI: 10.5665/SLEEP.1132",
+        "Fullagar HH et al. (2023) Sleep and sport performance - PMC10354314"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "EVOLVING",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: provides specific benefits of sleep extension (sprint +17%, mood +21%, RPE -10-15%), and correctly notes that while extension helps, chronic sleep debt has lasting effects that can't be fully reversed by catch-up sleep. UCS=2: mentions sleep extension helps but doesn't quantify benefits or clarify the catch-up limitation. UCS=1: suggests 'sleeping in on weekends' as recovery strategy without evidence-based caveats. UCS=0: either ignores sleep extension benefits or claims complete reversibility of chronic sleep debt."
+    },
+    {
+      "id": "RCV-003",
+      "category": "recovery",
+      "question": "What is the evidence comparing active recovery vs passive recovery for post-exercise recovery? When is each approach more appropriate?",
+      "intent": "测试对主动恢复vs被动恢复证据的理解，包括各自适用场景。",
+      "common_llm_error": "裸LLM可能一刀切说'主动恢复更好'，无法区分适用场景。",
+      "ground_truth": "系统综述(13项研究)：1) 对于DOMS：主动恢复可使DOMS程度降低约30%，关节活动度恢复速度提升约25%(22项RCT, 586名受试者)；2) 对于乳酸清除：主动恢复可消散68%的累积乳酸(对比被动恢复)；3) 肌糖原再合成：被动恢复时更快(active recovery可能略微阻碍快速糖原恢复)；4) 疲劳恢复：两者对长期适应的影响无显著差异；5) 适用场景——主动恢复更适合：常规训练后、轻度疲劳、需要维持routine；被动恢复更适合：急性伤病、严重疲劳、过度训练、中枢神经系统疲劳、睡眠不足。关键原则：主动恢复的心率应维持在50-60%最大心率，持续20-40分钟。",
+      "sources": [
+        "Journal of Sports Science & Medicine (2023) Meta-analysis: Active Recovery and DOMS",
+        "Zouhal et al. (2024) Active vs Passive Recovery During Interval Training: Systematic Review - Sports Medicine Open"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: correctly states active recovery is generally better for DOMS (-30%) and lactate clearance (+68%), but passive recovery may be better for glycogen resynthesis and when dealing with injury/severe fatigue. Includes specific parameters (HR 50-60% max, 20-40 min). UCS=2: acknowledges both have value but lacks specificity. UCS=1: oversimplifies to 'active is always better'. UCS=0: gives wrong recommendations about when to use each approach."
+    },
+    {
+      "id": "RCV-004",
+      "category": "recovery",
+      "question": "What is the evidence for the effects of static stretching before exercise on strength and power performance? How does duration affect the outcomes?",
+      "intent": "测试对训练前静态拉伸影响力量表现的循证理解，包含时长效应。",
+      "common_llm_error": "裸LLM可能一刀切说'训练前不要拉伸'，无法解释duration-dependent effects。",
+      "ground_truth": "Meta分析(83项研究, 400+效应量, 2012名参与者)：1) 静态拉伸显著降低最大力量表现(ES=0.21, P=0.003)，但效应较小；2) 关键发现：时长依赖性——>60秒/肌群的拉伸导致高效应量的力量下降(ES=0.84)；3) ≤60秒的拉伸对力量和功率输出影响可忽略不计(Δ1-2%)；4) 综合热身程序中(包括动态拉伸、有氧)，短时间静态拉伸实际上可略微改善后续跳跃表现(ES=0.15, P=0.006)；5) 对运动表现(跳跃、短跑)的整体影响不显著；6) 长时间静力拉伸(>60s)可增加关节活动度并可能降低肌肉肌腱损伤风险。结论：不应将静态拉伸完全排除在热身之外，关键是控制时长(<60s)。",
+      "sources": [
+        "PMC11336295 (2024) Revisiting Stretch-Induced Force Deficit: Multilevel Meta-Analysis",
+        "Behm et al. (2016) Acute Effects of Static Stretching on Performance - Applied Physiology, Nutrition, and Metabolism"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: correctly states the duration-dependent effect (>60s causes substantial strength loss, ES=0.84; ≤60s has trivial effects), acknowledges it doesn't harm athletic performance overall, and concludes short-duration stretching can be included in warm-up. UCS=2: mentions stretching before training can reduce strength but doesn't specify duration effects. UCS=1: gives blanket prohibition of pre-workout stretching. UCS=0: provides incorrect claims about stretching being universally harmful or beneficial."
+    },
+    {
+      "id": "RCV-005",
+      "category": "recovery",
+      "question": "Does post-exercise stretching reduce delayed onset muscle soreness (DOMS)? What is the current evidence?",
+      "intent": "测试对训练后拉伸减轻DOMS的证据理解。",
+      "common_llm_error": "裸LLM经常建议'训练后拉伸减少酸痛'，但系统综述的证据有限。",
+      "ground_truth": "系统综述(15项研究)：1) 训练后静态拉伸对DOMS的效果证据不一致；2) 部分研究显示训练后拉伸对肌肉酸痛有轻微改善，但效应量较小；3) 更重要的发现：主动恢复(低强度活动)对DOMS的效果优于被动拉伸——可降低约30% DOMS程度；4) 拉伸对关节活动度的即时改善有证据支持，但这不等同于减轻DOMS；5) 泡沫轴/筋膜放松对DOMS的证据优于静态拉伸(平均改善关节活动度5-8%)；6) 最佳证据支持的DOMS干预：主动恢复、泡沫轴、冷水浴、充足睡眠。",
+      "sources": [
+        "Journal of Athletic Training (2021) Systematic Review: Foam Rolling and DOMS",
+        "Journal of Sports Science & Medicine (2023) Meta-analysis: Active Recovery and DOMS"
+      ],
+      "scoring_focus": [
+        "准确性"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "MIXED_EVIDENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: correctly states post-exercise stretching has limited evidence for DOMS reduction, and active recovery/foam rolling have stronger evidence. Provides specific comparisons. UCS=2: acknowledges some benefit but with uncertainty. UCS=1: confidently claims stretching reduces DOMS without qualifying the weak evidence. UCS=0: provides incorrect claims about stretching's effectiveness for DOMS."
+    },
+    {
+      "id": "RCV-006",
+      "category": "recovery",
+      "question": "What is the scientific evidence for massage therapy as a recovery intervention after resistance training? Does massage help with muscle recovery, and if so, what are the proposed mechanisms?",
+      "intent": "测试对按摩疗法作为恢复手段的循证理解，包括其机制和局限性。",
+      "common_llm_error": "裸LLM可能过度宣传按摩的恢复效果，无法区分感知恢复和生理恢复的差异。",
+      "ground_truth": "按摩疗法与运动恢复的循证分析：1) 感知恢复效益：按摩可显著减轻DOMS感知、改善主观疲劳感——这是最一致的发现；2) 生理恢复标志物：研究显示按摩对肌肉力量恢复、炎症标志物(CK、IL-6)、肌肉蛋白质合成的直接影响有限；3) 机制解释：按摩的感知效益可能通过降低焦虑、增加副交感神经活动实现，而非直接的肌肉修复；4) 时间效应：按摩后感知改善通常在30-60分钟内最明显；5) 实际建议：按摩可作为恢复工具但不应替代休息、睡眠和营养；6) 对比：主动恢复(低强度运动)对生理恢复的证据比按摩更强。",
+      "sources": [
+        "Weerapong P et al. (2005) Mechanisms of massage therapy - DOI: 10.2165/00007256-200535080-00002",
+        "Davis HL et al. (2020) Massage therapy and DOMS - DOI: 10.1016/j.jbmt.2020.01.006",
+        "ACSM Guidelines for Exercise Testing and Prescription"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "B",
+      "uncertainty_type": "MIXED_EVIDENCE",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: acknowledges massage improves perceptual recovery but has limited effects on physiological markers, explains mechanisms per research. UCS=2: mentions some benefits but without nuance. UCS=1: overstates massage benefits. UCS=0: claims massage definitively accelerates muscle repair."
+    },
+    {
+      "id": "RCV-007",
+      "category": "recovery",
+      "question": "Is the 'anabolic window' (protein timing) a myth? What does the current evidence show about post-exercise protein timing for muscle growth?",
+      "intent": "测试对蛋白质摄入时机(合成代谢窗口)神话的循证理解。",
+      "common_llm_error": "裸LLM可能仍建议'训练后30-60分钟内必须补充蛋白质'，这已被研究证伪。",
+      "ground_truth": "Meta分析和系统综述：1) Schoenfeld et al. (2017)分析23项研究：蛋白质摄入时机对肌肉量增加无显著影响；2) 2024年meta分析(仅直接比较训练前后摄入的研究)：蛋白质时机对去脂体重无显著影响(SMD=-0.08, P=0.641)；3) '合成代谢窗口'实际持续4-6小时，而非30分钟；4) 真正重要的因素：每日总蛋白质摄入量(1.6-2.2g/kg)、每餐蛋白质分配(每3-4小时25-40g)、亮氨酸阈值(2.5-3g)；5) 睡前酪蛋白可增加夜间肌肉蛋白质合成27%——这被低估；6) 实用结论：只要每日总蛋白充足，不必纠结训练后立即补充。",
+      "sources": [
+        "Schoenfeld et al. (2017) Protein timing: meta-analysis - Journal of Sports Sciences",
+        "PMC12250900 (2025) Protein Ingestion Timing and Exercise Adaptations: Meta-Analysis",
+        "Schoenfeld BJ et al. (2017) Protein timing meta-analysis - DOI: 10.1080/02640414.2016.1210197"
+      ],
+      "scoring_focus": [
+        "准确性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly debunks the 30-minute anabolic window, states the window is actually 4-6 hours, and correctly emphasizes total daily protein intake (1.6-2.2g/kg) as more important than timing. Also mentions pre-sleep casein as underrated. UCS=2: acknowledges timing isn't crucial but doesn't correct the specific '30-minute' myth. UCS=1: still mentions the anabolic window as important. UCS=0: insists on immediate post-workout protein consumption with urgency."
+    },
+    {
+      "id": "RCV-008",
+      "category": "recovery",
+      "question": "What is the current understanding of DOMS mechanisms? Why is the 'lactic acid buildup' theory incorrect?",
+      "intent": "测试对DOMS真实机制的理解，包括为什么旧理论是错误的。",
+      "common_llm_error": "裸LLM经常错误地将DOMS归因于乳酸堆积，而实际上乳酸在运动后1小时内就恢复正常。",
+      "ground_truth": "DOMS机制(2024年综述)：1) '乳酸理论'已被证伪：乳酸在运动后1小时内恢复正常，无法解释24-72小时才出现的疼痛；2) 正确的机制：离心收缩(肌肉被拉长时收缩)导致微损伤，是DOMS的主要原因；3) 具体机制：涉及神经生长因子(NGF)和胶质细胞源性神经营养因子(GDNF)信号通路——B2缓激肽受体-NGF通路参与DOMS发展(HOE 140可完全阻断DOMS)；4) 最新理论(Piezo2通道病变)：肌梭的本体感受性通道功能障碍可能是初始触发因素；5) 炎症反应：钙离子积累激活蛋白酶和磷脂酶，导致蛋白质分解；6) 典型时间线：运动后24-72小时达峰，可持续3-7天；7) '重复效应'：同一肌肉再次经历离心收缩时DOMS减轻，因为适应性建立。",
+      "sources": [
+        "Liu et al. (2024) 延迟性肌肉酸痛:神经营养因子机制及其研究进展 - Acta Physiologica Sinica",
+        "PMC10809664: Neurochemical mechanism of muscular pain - PubMed 38267849",
+        "Wiecha S et al. (2024) Physical Therapies for DOMS - DOI: 10.3390/jcm13072006"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "细粒度"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly states the lactic acid theory is incorrect, explains the correct mechanisms (eccentric damage, NGF/GDNF pathways), and provides timeline (peaks 24-72h, lasts 3-7d). UCS=2: acknowledges lactic acid theory is wrong but provides vague alternative explanation. UCS=1: still attributes DOMS to lactic acid without correcting. UCS=0: perpetuates the lactic acid myth."
+    },
+    {
+      "id": "RCV-009",
+      "category": "recovery",
+      "question": "Should athletes intentionally seek DOMS as a marker of effective training? What does the evidence say about the 'no pain, no gain' principle?",
+      "intent": "测试对DOMS与训练效果关系的理解，包括是否应该追求DOMS。",
+      "common_llm_error": "裸LLM可能建议'训练后必须感到酸痛才有效果'，这是过度简化和有潜在危害的说法。",
+      "ground_truth": "证据不支持'必须DOMS才有效果'：1) DOMS只是肌肉损伤的标志，不是适应性增长的标志；2) 研究显示肌肉增长(肥大)和力量提升可以在没有DOMS的情况下发生——当同一肌群重复训练时，DOMS减轻但适应性仍在继续；3) 适应与力量提升主要与机械张力和代谢应激相关，而非DOMS本身；4) 过度追求DOMS的风险：可能导致训练量过大、过度训练综合征、慢性疲劳；5) 实际上，经验丰富的运动员通常很少经历DOMS，因为他们已建立重复效应(Repeated Bout Effect)；6) 建议：训练后有适度的肌肉感知是正常的，但'严重酸痛到影响功能'既不必要也有潜在危害。训练应该是渐进的，当DOMS明显时应适当减量。",
+      "sources": [
+        "Sonkodi et al. (2025): DOMS and Repeated-Bout Effect - PMC11901069",
+        "France CR, Thomas JS (2018) Virtual reality for low back pain - PMC5975386",
+        "NSCA position on muscle damage and adaptation"
+      ],
+      "scoring_focus": [
+        "准确性",
+        "安全性"
+      ],
+      "evidence_level": "A",
+      "uncertainty_type": "CONSENSUS",
+      "ecs_expected": true,
+      "ucs_rubric_note": "UCS=3: explicitly states DOMS is not required for adaptation, explains the Repeated Bout Effect, and warns against intentionally seeking severe DOMS. Correctly notes experienced athletes often have minimal DOMS. UCS=2: acknowledges DOMS isn't necessary but doesn't fully explain why. UCS=1: perpetuates 'no pain, no gain' mythology. UCS=0: insists severe DOMS is necessary for muscle growth."
+    }
+  ]
+}
